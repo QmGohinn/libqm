@@ -1,0 +1,29 @@
+     export START
+     AREA text,CODE,READONLY
+		export 
+START                                         
+		mov		r4, #1
+		mov		r5, #2
+		mov		r6, #3
+		mov		r7, #4
+		mov		r8, #5
+		mov		r9, #6
+		mov		r10,#7
+		mov		r11,#8
+		mov     r12,#8
+LABLE
+		ADD		r4, r4, #1
+		ADD		r5, r5, #1
+		ADD		r6, r6, #1
+		ADD		r7, r7, #1
+		ADD		r8, r8, #1
+		ADD		r9, r9, #1
+		ADD		r10,r10, #1
+		ADD		r11,r11, #1
+		STMDA   sp!,{r4-r11}
+		SUB     r12,#1
+		BNE		LABLE
+		LDMFD	sp,{r4-r11}
+stop
+ 		b		stop 					         
+		end

@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<string.h>
+int i,j;
+char *repeaterr = "Your name has exit, so inout again\n";
+char *succsign  = "Ok! you had sign in successful\n";
+struct client{int pthid;char name[10];};   //结构体定义完成
+
+struct client client[10];                      //定义一个数组结构体变量，大小为10
+
+client[i].pthid = connfd[i];         //在特定的线程内给结构体中的pthid赋值
+
+read(connfd[i],reqBuf,sizeof(reqBuf));    	             //读取用户输入的名字
+
+for(j=0;j<10;j++){
+		if(!strcmp(client[i].name,reqBuf)){
+					     write(connfd[i],repeaterr,sizeof(repeaterr));}
+		write(connfd[i],succsign,sizeof(succsign));}        	//for循环语句结束，循环对比,若出现重复，则反馈信息给客户端使其重新输入

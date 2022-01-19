@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <netinet/in.h>
+
+#define BUFFSIZE 128
+#define HOST_IP "127.0.0.1"
+#define PORT 8000
+ 
+int sockfd;
+
+void snd();
+void rcv();
+
+int main(){
+        	pthread_t thread;       // pthread_t 线程，gcc编译时需加上-lpthread
+        	struct sockaddr_in serv_addr;   // struct sockaddr_in
+ 	char buf[BUFFSIZE];
+        		bzero(&serv_addr, sizeof(struct sockaddr_in));  // bzero 清零
+        		serv_addr.sin_family = AF_INET;         // sin_family   AF_INET
+       		serv_addr.sin_port = htons(PORT);       // sin_port     htons(PORT)
+        		inet_pton(HOST_IP, &serv_addr.sin_addr);        //初始化服务端地址结构
+
+       	sockfd = socket(AF_INET, SOCK_STREAM, 0);        // 创建客户端套接字
+        	if(sockfd < 0){perror("fail to socket");exit(-1);}
+       	printf("connecting... \n");
+        		if(connect(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0){perror("fail to connect");exit(-2);}     // 与服务器建立连接
+
+/* ===程序分做两个线程 === */
+
+		
+        	pthread_create(&thread, NULL, (void *)(&snd), NULL);    //创建发送消息的线程，调用发送消息的函数snd
+		printf("请选择您想实现的功能\n\n");
+		printf("This is a user info\n");
+		printf("显示在线客户端,请输入'show'\n");
+		printf("发送消息,选择使用的功能，输入all为群发，to+您想发送的用户名为私发\n");
+		printf("建议在all或者to+用户名后加上一个空格方便信息的查看\n");
+		printf("退出该客户端的连接请输入bye\n");
+		while(1){
+			int len;
+               			if((len=read(sockfd, buf, BUFFSIZE)) > 0){       // read 读取通信套接字
+                        		buf[len] = '\0';        // 添加结束符，避免显示缓冲区中残留的内容
+                        		printf("\n%s", buf);
+                        		fflush(stdout);}        // if语句结束，fflush 冲洗标准输出，确保内容及时显示
+			}  //while语句结束
+        return 0;
+}   //main函数结束
+
+
+void snd(){						// 发送消息的函数
+        		char name[32], buf[BUFFSIZE];
+        		fgets(name, 32, stdin); // fgets 会读取输入字符串后的换行符
+        		write(sockfd, name, strlen(name));      // write 写入通信套接字
+        while(1){
+                	fgets(buf, BUFFSIZE, stdin);
+                	write(sockfd, buf, strlen(buf));
+                	if(strcmp(buf, "bye\n") == 0)   // 注意此处的\n
+                       	exit(0);
+        	}  //while结束
+}   //函数定义完成

@@ -1,0 +1,1 @@
+cmd_/mnt/hgfs/arm-test/9xiankejidaxue/driver/hello.ko := ld -r -m elf_i386 -T /usr/src/linux-headers-3.5.0-23-generic/scripts/module-common.lds --build-id  -o /mnt/hgfs/arm-test/9xiankejidaxue/driver/hello.ko /mnt/hgfs/arm-test/9xiankejidaxue/driver/hello.o /mnt/hgfs/arm-test/9xiankejidaxue/driver/hello.mod.o

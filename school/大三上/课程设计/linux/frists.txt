@@ -1,0 +1,129 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<unistd.h>
+#include<errno.h>
+#include<netdb.h>
+#include<sys/types.h>
+#include<sys/socket.h>
+#include<arpa/inet.h>
+#include<sys/wait.h>
+#include<signal.h>
+
+#define BUFSIZE 512
+
+static void bail(const char*on_what)
+{
+	fputs(strerror(errno),stderr);
+	fputs(":",stderr);
+	fputs(on_what,stderr);
+	fputc('\n',stderr);
+	exit(1);
+}
+
+static void sigchld_handler(int signo)
+{
+	pid_t pid;
+	int status;
+	char msg[]="SIGCHLD caught\n";
+	write(STDOUT_FILENO,msg,sizeof(msg));
+	do
+	{
+		pid=waitpid(-1,&status,WNOHANG);
+	}while(pid>0);
+}
+
+int main(int argc,char *argv[])
+{
+	int sockfd;
+	int new_fd;
+	struct sockaddr_in server_addr;
+	struct sockaddr_in client_addr;
+	pid_t pid;
+	socklen_t sin_size;
+	int port;
+	struct sigaction child_action;
+	char reqBuf[BUFSIZE];
+	int z;
+	memset(&child_action,0,sizeof(child_action));
+	child_action.sa_flags|=SA_RESTART;
+	child_action.sa_handler=sigchld_handler;
+	if(sigaction(SIGCHLD,&child_action,NULL)==-1)perror("fail to ignore SIGCHLD");
+	if(argc!=2)
+	{
+		fprintf(stderr,"Usage:%s portnumber\a\n",argv[0]);
+		exit(1);
+	}
+	if((port=atoi(argv[1]))<0)
+	{
+		fprintf(stderr,"Usage:%s portnumber\a\n",argv[0]);
+		exit(1);
+	}
+	if((sockfd=socket(PF_INET,SOCK_STREAM,0))==-1)
+	{
+		fprintf(stderr,"socket error:%s\a\n",strerror(errno));
+		exit(1);
+	}
+	memset(&server_addr,0,sizeof(server_addr));
+	server_addr.sin_family=AF_INET;
+	server_addr.sin_addr.s_addr=htonl(INADDR_ANY);
+	server_addr.sin_port=htons(port);
+	if((bind(sockfd,(struct sockaddr*)(&server_addr),sizeof(server_addr)))==-1)
+	{
+		fprintf(stderr,"bind error:%s\a\n",strerror(errno));
+		exit(1);
+	}
+	if(listen(sockfd,128)==-1)
+	{
+		fprintf(stderr,"listen error:%s\a\n",strerror(errno));
+		exit(1);
+	}
+	while(1)
+	{
+		sin_size=sizeof(struct sockaddr_in);
+		printf("server is waiting for new client\n");
+	if((new_fd = accept(sockfd,(struct sockaddr *)(&client_addr),&sin_size))==-1)
+		{
+			fprintf(stderr,"Accept error:%s\a\n",strerror(errno));
+			exit(1);
+		}
+		fprintf(stdout,"Server got connection from %s\n",inet_ntoa(client_addr.sin_addr));
+		pid = fork();
+		switch(pid)
+		{
+			case -1:
+			perror("fork failed");
+			exit(1);
+			case 0:
+			puts("Entering the child\n");
+			for(;;)
+			{
+z = read(new_fd,reqBuf,sizeof(reqBuf));
+if(z<0)
+	bail("read()");
+if(z==0)
+	break;
+reqBuf[z]=0;
+if(!strcasecmp(reqBuf,"QUIT"))
+	break;
+int num=0;
+int j=0;
+for(j=0;j<z;j++)
+{
+	if(reqBuf[j]>='a'&&reqBuf[j]<='z'||reqBuf[j]>='A'&&reqBuf[j]<='z')num++;
+}
+
+z=write(new_fd,&num,sizeof(num));
+if(z<0)
+	bail("write()");
+			}
+printf("Child process:%d exits.\n",getpid());
+close(new_fd);
+exit(0);
+default:
+puts("this is the parent\n");
+close(new_fd);	
+		}
+	}
+}
+

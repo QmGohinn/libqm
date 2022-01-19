@@ -1,0 +1,123 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<errno.h>
+//#include<process.h>
+#include<netdb.h>
+#include<sys/types.h>
+#include<sys/socket.h>
+#include<arpa/inet.h>
+#include<sys/wait.h>
+#include<signal.h>
+#include<time.h>
+#define BUFSIZE 512      //宏定义所用到的头文件以及一个bufsize
+
+static void bail(const char*on_what){
+	fputs(strerror(errno),stderr);
+	fputs(":",stderr);
+	fputs(on_what,stderr);
+	fputc('\n',stderr);
+	exit(1);}           //定义了一个输出错误函数
+
+static void sigchld_handler(int signo){
+	pid_t pid;
+	int status;
+	char msg[]="SIGCHLD caught\n";
+	write(STDOUT_FILENO,msg,sizeof(msg));
+	do{
+	          pid=waitpid(-1,&status,WNOHANG);
+	}while(pid>0);}                //定义了一个收尸函数
+
+int main(int argc,char *argv[]){       //主函数（程序入口）
+
+	int sockfd;int new_fd[24];
+	struct sockaddr_in server_addr;
+	struct sockaddr_in client_addr;
+	pid_t pid;  //int *accept_fd;accept_fd=malloc(sizeof(int)*24);
+	socklen_t sin_size;
+	int port;int usernum=0;
+	struct sigaction child_action;
+	char reqBuf[BUFSIZE];
+	int i,z,choose,y;
+	 			printf("Hi!欢迎进入群组聊天室管理台\n\n");
+				printf("请输入您想实现的功能\n");               //实现服务器的菜单选项，服务器选择功能模块
+				printf("1.查看当前聊天室人数\n");
+				printf("2.踢出一个用户\n");
+				printf("3.选定用户创建一个群聊\n");
+				printf("4.解散某个已创建的群聊\n");
+				printf("5.关闭服务器\n\n");
+				printf("聊天管理台启动成功，等待用户进入聊天室......\n");
+	for(i=0;i<24;i++)new_fd[i]=-1;
+	memset(&child_action,0,sizeof(child_action));
+	child_action.sa_flags|=SA_RESTART;
+	child_action.sa_handler=sigchld_handler;     //告知父进程在收到子进程的终止信号应该进行的操作即sigchld_handler函数
+	if(sigaction(SIGCHLD,&child_action,NULL)==-1)perror("fail to ignore SIGCHLD");   //下为常见参数不足所需输出的错误信息
+	if(argc!=2){
+		fprintf(stderr,"Usage:%s portnumber\a\n",argv[0]);
+		exit(1);}
+	if((port=atoi(argv[1]))<0){
+		fprintf(stderr,"Usage:%s portnumber\a\n",argv[0]);
+		exit(1);}
+	if((sockfd=socket(PF_INET,SOCK_STREAM,0))==-1){          //在此创建了服务器的tcp套接字
+		fprintf(stderr,"socket error:%s\a\n",strerror(errno));
+		exit(1);}
+//接下来初始化server.addr结构体，并用bind函数绑定套接字
+	memset(&server_addr,0,sizeof(server_addr));
+	server_addr.sin_family=AF_INET;
+	server_addr.sin_addr.s_addr=htonl(INADDR_ANY);
+	server_addr.sin_port=htons(port);
+	if((bind(sockfd,(struct sockaddr*)(&server_addr),sizeof(server_addr)))==-1)/*若bind失败输出原因*/{
+		fprintf(stderr,"bind error:%s\a\n",strerror(errno));
+		exit(1);}
+	if(listen(sockfd,24)==-1)/*设置最大监听套接字的个数*/{
+		fprintf(stderr,"listen error:%s\a\n",strerror(errno));
+		exit(1);}
+	while(1){
+		sin_size=sizeof(struct sockaddr_in);
+		for(i=0;i<24;i++){
+				   if(new_fd[i] == -1)break;}
+		if((new_fd[i]=accept(sockfd,(struct sockaddr *)(&client_addr),&sin_size))==-1){
+		fprintf(stderr,"Accept error:%s\a\n",strerror(errno));      //判断accept是否调用错误
+		exit(1);}
+		printf("%d\n",new_fd[i]);						//accept_fd[x]=new_fd;x=x+1;
+		/*if(usernum!=0)*/
+		printf("user%d进入聊天室...",++usernum);
+		//if(usernum==0)printf("管理员上线了....\n");usernum++;
+		//若accept调用成功，则在管理台输出设备上打印该用户的文件描述符，并使clinum++以便存储下一个连接的用户的文件描述符
+		pid = fork();    //创建子进程来完成用户的收发消息操作
+		switch(pid){
+			case -1:perror("fork failed");exit(1);     //创建子进程失败输出错误
+			case  0:for(;;){
+				printf("负责该用户通信的是进程%d\n",getpid());
+					//z = read(new_fd[i],reqBuf,sizeof(reqBuf));
+					//printf("user%d为自己取名%s",usernum,reqBuf);
+					//memset(&reqBuf,0,sizeof(reqBuf));
+					z = read(new_fd[i],reqBuf,sizeof(reqBuf));
+				if(!strcasecmp(reqBuf,"QUIT")){break;}
+				if(!strcmp(reqBuf,"0")){printf("当前用户user%d进行取名\n",usernum);}     //if语句结束
+				if(!strcmp(reqBuf,"1")){printf("当前用户user%d进行群发消息\n",usernum);
+						    	memset(&reqBuf,0,sizeof(reqBuf));
+						      	z = read(new_fd[i],reqBuf,sizeof(reqBuf));  //breakpoint
+						    					 //strcat(reqBuf,reqBuf);
+						     	printf("user%d say : %s\n",usernum,reqBuf);
+						     	write(new_fd[i],reqBuf,sizeof(reqBuf));
+					/*for(i=0;i<24;i++){
+							if(new_fd[i]!=-1)
+							write(new_fd[i],reqBuf,sizeof(reqBuf));}*/       //for循环结束
+					        	    }		//break;if语句结束
+				if(!strcmp(reqBuf,"2")){printf("当前用户user%d想进行私聊\n",usernum);}    //if语句结束
+				if(!strcmp(reqBuf,"3")){printf("当前用户user%d想查看当前在线客户端\n",usernum);}   //if语句结束
+				if(!strcmp(reqBuf,"4")){printf("当前用户user%d想退出群聊\n",usernum);}       //if语句结束
+				if(!strcmp(reqBuf,"5")){printf("当前用户user%d\n想给某个用户发送文件\n",usernum);}     //if语句结束
+				if(!strcmp(reqBuf,"6")){printf("当前用户user%d想无痕发送群发信息\n",usernum);}        //if语句结束
+					}  //case 0 的for循环结束
+			default:close(new_fd[i]);};                                //pid的switch语句结束
+		}                                                                                                                                     //while语句结束
+return 0;
+
+}
+
+
+
+

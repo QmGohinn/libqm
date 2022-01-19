@@ -1,0 +1,117 @@
+#include<stdio.h>
+#include<windows.h>
+
+int main(void){
+
+HANDLE  h;
+
+h = CreateSemaphore(NULL,0,10,"ScanfSuccess");
+
+while(1)
+{
+
+char x;
+
+scanf("%c",&x);
+
+ReleaseSemaphore(h,1,NULL);
+
+}
+
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+
+#include<windows.h>
+
+int main(void){
+
+HANDLE  h;
+
+int count = 0;
+
+h = CreateSemaphore(NULL,0,10,"ScanfSuccess");
+
+while(1)
+
+{
+
+WaitForSingleObject(h,INFINITE);
+
+count = count++;
+
+printf("%d",count);
+
+}
+
+
+return 0;
+
+}
+
+
+
+
+
+
+
+#include<stdio.h>
+#include<windows.h>
+HANDLE m;
+
+DWORD WINAPI ThreadFunc1(LPVOID_lpParam){
+
+int i;
+for(i = 0;i < 5; i++)
+{
+
+WaitForSingleObject(m,INFINITE);
+printf("thread1 step1 int the critical section\n");
+printf("thread1 step2 int the critical section\n");
+ReleaseMutex(m);
+
+
+}
+   return 0;
+}
+
+DWORD WINAPI ThreadFunc2(LPVOID_lpParam){
+
+
+int i;
+for(i = 0;i < 5; i++)
+{
+
+WaitForSingleObject(m,INFINITE);
+printf("thread2 step1 int the critical section\n");
+printf("thread2 step2 int the critical section\n");
+ReleaseMutex(m);
+
+}
+   return 0;
+}
+
+int main(){
+
+
+char c;
+m = CreateMutex(NULL,FALSE,NULL);
+CreateThread(NULL,0,ThreadFunc1,0,0,0);
+CreateThread(NULL,0,ThreadFunc2,0,0,0);
+
+scanf("%c\n",&c);
+
+
+}

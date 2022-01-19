@@ -1,0 +1,92 @@
+#include<stdio.h>
+#include<unistd.h>
+#include<stdlib.h>
+#include<errno.h>
+#include<string.h>
+#include<sys/socket.h>
+#include<sys/types.h>
+#include<arpa/inet.h>
+#define BUFSIZE 512
+
+static void bail(const char *on_what)
+{
+  fputs(strerror(errno),stderr);
+fputs(":",stderr);
+fputs(on_what,stderr);
+fputc('\n',stderr);
+exit(1);
+}
+
+int main(int argc,char **argv)
+{
+long z;
+int sockfd;
+char *srvr_addr=NULL;
+struct sockaddr_in server_addr;
+struct sockaddr_in client_addr;
+int len_inet;
+int portnumber;
+
+char dgram[BUFSIZE];
+srvr_addr=argv[1];
+if((portnumber=atoi(argv[2]))<0)
+{
+fprintf(stderr,"port error");
+exit(1);
+}
+
+sockfd=socket(AF_INET,SOCK_DGRAM,0);
+if(sockfd==-1)
+bail("socket()");
+memset(&server_addr,0,sizeof(server_addr));
+server_addr.sin_family=AF_INET;
+server_addr.sin_port=htons(portnumber);
+if(!inet_aton(srvr_addr,&server_addr.sin_addr))
+bail("bad address...");
+z=bind(sockfd,(struct sockaddr *)&server_addr,sizeof(server_addr));
+if(z==-1)
+bail("bind()");
+printf("server is waiting for client request.\n");
+for(;;)
+{
+len_inet=sizeof client_addr;
+z=recvfrom(sockfd,dgram,sizeof(dgram),0,(struct sockaddr*)  &client_addr,&len_inet);
+printf("the length of the letters is:%ld\n",z);
+if(z<0)
+bail("recvfrom()");
+dgram[z]=0;
+if(!strcasecmp(dgram,"QUIT"))
+continue;
+
+int num=0;
+for(int j=0;j<z;j++)
+{
+if(dgram[j]<='z'&&dgram[j]>'a'||dgram[j]<='Z'&&dgram[j]>='A')
+num++;
+}
+printf("the number of the English letter is:%d\n",num);
+z=sendto(sockfd,&num,sizeof(int),0,(struct sockaddr*)
+&client_addr,sizeof(client_addr));
+if(z<0)
+bail("sendto()");
+}
+close(sockfd);
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

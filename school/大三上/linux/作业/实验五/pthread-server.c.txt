@@ -1,0 +1,67 @@
+#include<stdio.h>
+#include<unistd.h>
+#include<stdlib.h>
+#include<arpa/inet.h>
+#include<ctype.h>
+#include<strings.h>
+#include<pthread.h>
+#include<fcntl.h>
+#define SERV_PORT 6666
+struct s_info{//定义一个结构体，将地址结构和cfd捆绑
+	struct sockaddr_in cliaddr;
+	int connfd;
+};
+void *do_work(void *arg){
+	int n,i;
+	struct s_info *ts=(struct s_info *) arg;
+	char buf[BUFSIZ];	
+	send(ts->connfd,"Welcome client.\n",16,0);
+	while(1){
+		bzero(buf,sizeof(buf));
+		n=read(ts->connfd,buf,BUFSIZ);  //读客户端
+		if(n==0){
+			printf("the client %d closed...\n",ts->connfd);
+			break; //跳出循环，关闭cfd
+		}else if(n<0)
+			perror("read error");
+		printf("\nreceived from %s,PORT %d\n",inet_ntoa((*ts).cliaddr.sin_addr),ntohs((*ts).cliaddr.sin_port)); //打印客户端信息（IP/PORT
+				printf("the length of string is %d\n",n);
+		int num=0;
+		for(int j=0;j<n;j++)
+			if(buf[j]<='Z'&&buf[j]>='A' || buf[j]<='z' && buf[j]>='a')
+				num++;
+		n=write(ts->connfd,&num,sizeof(int));
+		if(n<0)
+			perror("write error");
+		printf("the number of the English letters is :%d\n",num);
+	}
+	close(ts->connfd);
+		return (void*)0;
+}
+int main(){
+	pthread_t tid;
+	int listenfd,connfd;
+	struct sockaddr_in servaddr,cliaddr;
+	socklen_t cliaddr_len;
+	struct s_info ts[256]; //根据最大线程数创建结构体数组
+	int i=0; 
+	listenfd=socket(AF_INET,SOCK_STREAM,0); //创建一个socket，得到lfd
+	bzero(&servaddr,sizeof(servaddr)); //地址结构清零
+	servaddr.sin_family=AF_INET;
+	servaddr.sin_port=htons(SERV_PORT); //指定端口号
+	servaddr.sin_addr.s_addr=htonl(INADDR_ANY); //指定本地任意IP
+	bind(listenfd,(struct sockaddr *)&servaddr,sizeof(servaddr)); //绑定
+	listen(listenfd,128); //设置同一时刻连接服务器上限数
+	printf("Accepting client connect...\n");
+	while(1){
+		cliaddr_len=sizeof(cliaddr);
+		connfd=accept(listenfd,(struct sockaddr *)&cliaddr,&cliaddr_len); //阻塞监听客户端连接请求
+		ts[i].cliaddr=cliaddr;
+		ts[i].connfd=connfd; //达到线程最大数时，pthread_create出错处理，增加服务器稳定性
+		pthread_create(&tid,NULL,do_work,(void*)&ts[i]);
+		pthread_detach(tid); //子线程分离，防止僵尸线程产生
+		i++;
+	}
+	return 0;
+}
+

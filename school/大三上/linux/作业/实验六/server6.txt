@@ -1,0 +1,219 @@
+#include<stdlib.h>
+#include<stdio.h>
+#include<string.h>
+#include<unistd.h>
+#include<errno.h>
+#include<netdb.h>
+#include<sys/types.h>
+#include<netinet/in.h>
+#include<sys/socket.h>
+#include<arpa/inet.h>
+#include<sys/wait.h>
+#include<assert.h>
+#include"list.h"
+#define BUFSIZE 512
+
+struct socket_opt{
+
+int fd;
+int (*do_task)(struct sockfd_opt*p_so);
+struct list_head list;
+
+};
+
+typedef struct sockfd_opt SKOPT,*P_SKOPT;
+int send_reply(struct sockfd_opt*);
+int creat_conn(struct sockfd_opt*);
+
+int init(int);
+LIST_HEAD(fd_queue);
+int num;
+fd_set rfds,orfds;
+int maxfd;
+
+
+static void bail(const char *on_what){
+
+fputs(strerror(errno),stderr);
+fputs(":",stderr);
+fputs(on_what,stderr);
+fputc('\n',stderr);
+
+exit(1);
+
+}
+
+int main(int argc,char *argv[]){
+
+int listen_fd;
+struct sockaddr_in srvaddr;
+int port;
+int n;
+P_SKOPT p_so;
+socklen_t optlen;
+int sr=1;
+
+if(argc !=2){
+
+fprintf(stderr,"Usage:%s port\a\n",argv[0]);
+exit(1);
+}
+
+if((port=atoi(argv[1]))<0){
+
+fprintf(stderr,"Usage:%s port\a\n",argv[0]);
+
+exit(1);
+}
+
+
+
+if((listen_fd=socket(PF_INET,SOCK_STREAM,0))==-1)
+bail("socket()");
+
+optlen=sizeof(sr);
+int ret=setsockopt(listen_fd,SOLSOCKET,SO_REUSEADDR,&sr,optlen);
+
+if(ret)
+	bail("socketopt()");
+
+memset(&srvaddr,0,sizeof srvaddr);
+srvaddr.sin_family=PF_INET;
+srvaddr.sin_addr.s_addr=htonl(INADDR_ANY);
+srvaddr.sin_port=htons(port);
+
+if((bind(listen_fd,(struct sockaddr *)(&srvaddr),sizeof srvaddr))==-1)
+
+	bail("bind()");
+
+if(listen(listen_fd,5)==-1)
+
+	bail("listen()");
+maxfd=listen_fd;
+if(init(listen_fd))
+	bail("init()");
+
+printf("Server is waiting for accertance of new client\n");
+
+for(;;){
+
+rfds=orfds;
+n=select(maxfd+1,&rfds,NULL,NULL,NULL);
+
+for(;n>0;n--){
+
+list_for_each_entry(p_so,&fd_queue,list){
+
+if(FD_ISSET(p_so->fd,&rfds))
+
+p_so->do_task(p_so);
+
+}
+
+
+}
+
+}
+close(listen_fd);
+
+return 0;
+
+}
+
+
+int send_reply(struct sockfd_opt *p_so){
+
+char reqBuf[BUFSIZE];
+char dtfmt[BUFSIZE];
+
+time_t td;
+struct tm tv;
+int z;
+
+if((z=read(p_so->,reqBuf,sizeof(reqBuf)))<=0){
+
+close(p_so->fd);
+FD_CLR(p_so->fd,&orfds);
+
+list_del(&p_so->list);
+free(p_so);
+
+if(z<0&&errno!=ECONNRESET)
+bail("read()");
+
+}else{
+
+reqBuf[z]=0;
+int num=0;
+for(int j=0;j<z;j++){
+
+if(reqBuf[j]>='a'&&reqBuf[j]<='z'||reaBuf[j]>='A'&&reqBuf[j]<='Z')
+
+num++;
+}
+z=write(p_so->fd,&num,sizeof(int));
+
+if(z<0)
+bail("write()");
+}
+return 0;
+}
+
+int creat_conn(struct sockfd_opt *p_so){
+struct sockaddr_in cliaddr;
+int conn_fd;
+socklen_t sin_size;
+sin_size=sizeof(struct sockaddr_in);
+if((conn_fd=accept(p_so->fd,(struct sockaddr *)(&cliaddr),&sin_size))==-1){
+
+fprintf(stderr,"Accept error:%s\a\n",strerror(errno));
+
+exit(1);
+}
+
+fprintf(stdout,"Server got connection from%s: %d\n",inet_ntoa(cliaddr.sin_addr),ntohs(cliaddr.sin_port));
+if(num++==FD_SETSIZE){
+fprintf(stderr,"too many clients!\n");
+close(conn_fd);
+
+return -1;
+
+}
+if((p_so=(P_SKOPT)malloc(sizeof(SKOPT)))==NULL){
+
+perror("malloc");
+
+return -1;
+}
+p_so->fd=conn_fd;
+p_so->do_task=send_reply;
+list_add_tail(&p_so->list,&fd_queue);
+FD_SET(conn_fd,&orfds);
+if(conn_fd>maxfd)
+	maxfd=conn_fd;
+return 0;
+}
+
+int init(int sk){
+P_SKOPT p_so;
+num=0;
+if((p_so=(P_SKOPT)malloc(sizeof(SKOPT)))==NULL){
+
+perror("malloc");
+return -1;
+
+}
+
+assert(list_empty(&fd_queue));
+p_so->do_task=creat_conn;
+p_so->fd=sk;
+list_add_tail(&p_so->list,&fd_queue);
+num++;
+
+
+FD_ZERO(&orfds);
+FD_SET(sk,&orfds);
+return 0;
+}
+
+

@@ -1,0 +1,122 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<errno.h>
+#include<string.h>
+#include<netdb.h>
+#include<sys/types.h>
+#include<sys/socket.h>
+#include<arpa/inet.h>
+#include<time.h>
+
+#define BUFSIZE 512
+
+static void bail(const char *on_what){
+  fputs(strerror(errno),stderr);
+  fputs(":",stderr);
+  fputs(on_what,stderr);
+  fputc('\n',stderr);
+  exit(1);}      //定义错误输出函数以用来输出调用函数错误的原因
+
+int main(int argc,char *argv[]){
+	int sockfd;
+//int num1;
+	char buf[BUFSIZE];
+	struct sockaddr_in server_addr;
+	struct hostent *host;
+	int portnumber,nbytes;
+	int z=0;char groupchat[20];
+//char choose[5];
+	char reqBuf[BUFSIZE];
+	char name[5];
+	int  choose;
+//char unsignedname[5];
+//char signedname[5];
+	if(argc!=3){
+  	fprintf(stderr,"Usage:%s hostname portnuber\a\n",argv[0]);
+   	exit(1);}
+
+	if((host=gethostbyname(argv[1]))==NULL){
+ 	fprintf(stderr,"Gethostname error \n");
+	exit(1);}
+
+	if((portnumber=atoi(argv[2]))<0){
+  	fprintf(stderr,"Usage:%s hostname portnumber\a\n",argv[0]);
+ 	exit(1);}
+
+	if((sockfd=socket(PF_INET,SOCK_STREAM,0))==-1){
+  	fprintf(stderr,"Socket error:%s\a\n",strerror(errno));
+ 	exit(1);}   						//上述四个if语句分别对应四种异常情况，并给出对应的输出
+
+	memset(&server_addr,0,sizeof(server_addr));		//清空server.addr结构体,并调用connect函数
+	server_addr.sin_family=AF_INET;
+	server_addr.sin_port=htons(portnumber);
+	server_addr.sin_addr.s_addr=htonl(INADDR_ANY);
+//	server_addr.sin_addr=*((struct in_addr *)host->h_addr);
+
+	if(connect(sockfd,(struct sockaddr*)(&server_addr),sizeof(server_addr))==-1){
+ 	fprintf(stderr,"connect error : %s\a\n",strerror(errno));
+ 	exit(1);}
+	printf("请输入您想在本次聊天中的用户名\n");     //用于给客户端选择，如果自身已在服务器的通信名单里，则直接登录即可，若尚未注册，则需要手动向服务器注册
+	scanf("%s",name);
+	printf("<OK!In this chat,my name is %s>\n\n",name);
+//	write(sockfd,name,sizeof(name));
+
+
+
+//下为接口，为可能用到的注册登录系统留下接口
+	/*switch(num1){
+
+			case 1: 	printf("请输入你想注册的用户名\n");  //先注册一个客户端在聊天里的名字，并且要将该名字发给服务器进行重复检验
+	        			scanf("%c",unsignedname);             //手动输入一个你想取的名字
+					write(sockfd,unsignedname,sizeof(unsignedname));break;
+			case 2: 	printf("请输入你的已注册用户名\n");
+	                        		scanf("%s",signedname);break;              //手动输入你已经注册的名字
+	//read();    //将该用户名用read函数发给服务器比对                                                                                    */
+
+
+
+
+for(;;){                                             //如果采用注册登录系统则if语句条件改为对比成功，如果比对成功，则继续用switch语句让用户选择下一步的功能
+	printf("请选择您想实现的功能\n");
+	printf("0.给当前聊天中的自己取一个名字\n");
+	printf("1.给在线的群聊用户群发信息<保存聊天记录>\n");
+	printf("2.给某个客户端私聊\n");
+	printf("3.查看当前在线的客户端\n");
+	printf("4.退出该客户端的连接\n");
+	printf("5.给某个在线用户传输文件\n");
+	printf("6.给在线的群聊用户群发信息<不保存聊天记录>\n");
+                scanf("%d",&choose);
+                                                    // choose=(char)num2;
+                switch(choose){
+
+		case 1: memset(&reqBuf,0,sizeof(reqBuf));
+							//strcat(reqBuf,(char)choose);
+			reqBuf[0]='1';
+			write(sockfd,reqBuf,sizeof(reqBuf));
+							//printf("%s",reqBuf);
+			printf("请输入您想发送的信息:\n");
+			memset(&reqBuf,0,sizeof(reqBuf));
+			scanf("%s",reqBuf);
+			write(sockfd,reqBuf,sizeof(reqBuf));
+								//read(sockfd,reqBuf,sizeof(reqBuf));
+			//printf("%s",reqBuf);//break;
+			read(sockfd,reqBuf,sizeof(reqBuf));printf("I say :%s\n",reqBuf);
+		case 2://break;
+
+		case 3://break;
+
+		case 4://break;
+
+		default :break;};  //switch 完成
+	                                                                            //如果采用注册登录系统，则if语句at here结束
+
+}      //for循环完成
+close(sockfd);
+return 0;
+
+}
+
+
+
+

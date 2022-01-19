@@ -1,0 +1,98 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<errno.h>
+#include<string.h>
+#include<netdb.h>
+#include<sys/socket.h>
+#include<sys/types.h>
+#include<arpa/inet.h>
+#define BUFSIZE 512
+
+static void bail(const char *on_what)
+{
+ fputs(strerror(errno),stderr);
+ fputs(":",stderr);
+ fputs(on_what,stderr);
+ fputc('\n',stderr);
+ exit(1);
+}
+
+int main(int argc,char *argv[])
+{
+ int sockfd;
+ int new_fd;
+ struct sockaddr_in server_addr;
+ struct sockaddr_in client_addr;
+ socklen_t size;
+ int portnumber;
+ char reqBuf[BUFSIZE];
+ int z;
+ if(argc!=2)
+    {
+      fprintf(stderr,"wrong\n");
+      exit(1);
+    }
+ if((portnumber=atoi(argv[1]))<0)
+    {
+     fprintf(stderr,"wrong\n");
+     exit(1);
+    }
+ if((sockfd=socket(PF_INET,SOCK_STREAM,0))==-1)
+    {
+      fprintf(stderr,"Socket error:%s\a\n",strerror(errno));
+      exit(1);
+    }
+ memset(&server_addr,0,sizeof(server_addr));
+   server_addr.sin_family=AF_INET;
+   server_addr.sin_addr.s_addr=htonl(INADDR_ANY);
+   server_addr.sin_port=htons(portnumber);
+ if((bind(sockfd,(struct sockaddr*)(&server_addr),sizeof(server_addr)))==-1)
+ {
+  fprintf(stderr,"Listen error:%s\a\n",strerror(errno));
+  exit(1);
+ }
+ if(listen(sockfd,128)==-1)
+ {
+  fprintf(stderr,"Listen error:%s\a\n",strerror(errno));
+  exit(1);
+ }
+
+ printf("waiting for the client request...\n");
+ while(1)
+   {
+    size=sizeof(struct sockaddr_in);
+  if((new_fd=accept(sockfd,(struct sockaddr*)(&client_addr),&size))==-1)
+   {
+    fprintf(stderr,"Accept error:%s\a\n",strerror(errno));
+    exit(1);
+   }
+fprintf(stdout,"Server got connection from %s\n",inet_ntoa(client_addr.sin_addr));
+    for(;;)
+    {
+      z=read(new_fd,reqBuf,sizeof(reqBuf));
+      printf("the length of the String is :%d\n",z);
+      if(z<0)
+         bail("read()");
+      if(z==0)
+        {
+          close(new_fd);
+          break;
+        }
+      reqBuf[z]=0;
+      int num=0;
+      for(int j=0;j<z;j++)
+      {
+       if(reqBuf[j]<='z'&&reqBuf[j]>='a'||reqBuf[j]<='Z'&&reqBuf[j]>='A')
+       num++;
+      }
+     z=write(new_fd,&num,sizeof(int));
+     printf("the number of the English letters is :%d\n",num);
+     if(z<0)
+      bail("write()");
+      }
+   }
+
+
+
+}

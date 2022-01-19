@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+
+	int a,y,i,z,p;
+
+	int num = 0;
+
+	int* l;
+
+	printf("请输入磁盘请求的序列号总数\n");
+
+	scanf("%d",&a);
+
+	printf("请输入磁盘臂的初始位置\n");
+
+	scanf("%d",&y);
+
+	printf("请确认总数是否为:%d,若正确可忽略\n",a);
+
+	l=malloc(sizeof(int)*a);
+
+	l[0] = y;
+
+	printf("请依次输入磁盘请求的位置(按照数量输入并且请按照请求到达先后顺序输入)\n");
+
+	for(i=1;i<=a;i++)
+	{
+
+		int x;
+
+		scanf("%d",&x);
+
+		l[i] = x;
+
+	}
+
+	for(p=1;p<=a;p++)
+	{
+
+		z=abs(l[p]-l[p-1]);
+	
+		num = num + z;
+	}
+
+	printf("机械臂走过的总长度为:%d\n",num);
+
+	return 0;
+
+}
