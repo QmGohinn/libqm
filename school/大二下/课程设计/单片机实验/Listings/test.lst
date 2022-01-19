@@ -1,0 +1,61 @@
+C51 COMPILER V9.56.0.0   TEST                                                              07/01/2020 19:54:16 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE TEST
+OBJECT MODULE PLACED IN .\Objects\test.obj
+COMPILER INVOKED BY: D:\keli.C51\C51\BIN\C51.EXE test.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\tes
+                    -t.lst) TABS(2) OBJECT(.\Objects\test.obj)
+
+line level    source
+
+   1          #include"reg51.h"
+   2          sbit l1=P2^0;
+   3          sbit l2=P2^6;
+   4          sbit sw2=P1^7;
+   5          sbit sw1=P1^0;
+   6          void delay(unsigned int n)
+   7          {
+   8   1        
+   9   1        unsigned int i=0,j=0;
+  10   1        
+  11   1        for(i=0;i<n;i++)
+  12   1        {
+  13   2            for(j=0;j<120;j++);
+  14   2        }
+  15   1      }  //这个是延时函数，如果想实现led灯的闪烁而不是常亮的话 可以调用此函数进行led灯的闪烁
+  16          
+  17          
+  18          /*void shan1(int a)
+  19          {
+  20            int b = 0; 
+  21            int c = 0;
+  22            for(b=0;b<a;b++)
+  23            l1=1;
+  24            delay(5);
+  25          
+  26          }*/
+  27          void main()
+  28          {
+  29   1        
+  30   1        while (sw2 == 1)               {l1 = 1 ;l2 = 1;}
+  31   1        
+  32   1        while (sw2 == 0 && sw1 == 0)   {l2 = 0 ;delay(5);l2 = 1;delay(5); l2 = 0 ;l1 = 1;}
+  33   1      
+  34   1        while (sw2 == 0 && sw1 == 1)   {l1 = 0 ;delay(5);l1 = 1;delay(5); l1 = 0 ;l2 = 1;}
+  35   1      
+  36   1      
+  37   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     94    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

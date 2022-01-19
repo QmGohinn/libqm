@@ -1,0 +1,688 @@
+#include"连接.h"
+#include"断开连接.h"
+#include<stdlib.h>
+int main()
+{
+	system("color 70");
+	int s;
+	printf("************************************************************************************\n");
+	printf("************************************************************************************\n");
+	printf("*******************************欢迎使用图书馆操作软件!******************************\n");
+	printf("************************************************************************************\n");
+	printf("************************************************************************************\n");
+	printf("请输入:\n1:管理员登录\n2:工作人员登录\n3:学生登录\n");
+	scanf("%d", &s);
+	switch (s)
+	{
+	case 1://系统管理员登录系统模块
+	{ lianjie();
+	printf("请输入登录账号：\n");
+	scanf("%s", Account);
+	printf("请输入登录密码：\n");
+	scanf("%s", Password);
+	SQLCHAR sql3[] = "use study";
+	SQLCHAR sql4[] = "select * from admin";
+	ret = SQLExecDirect(hstmt, sql3, SQL_NTS);
+	ret = SQLExecDirect(hstmt, sql4, SQL_NTS);
+	if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+	{
+		SQLCHAR str1[50], str2[50];
+		SQLINTEGER len_str1, len_str2;
+		while (SQLFetch(hstmt) != SQL_NO_DATA)
+		{
+			SQLGetData(hstmt, 1, SQL_C_CHAR, str1, 50, &len_str1);   //获取第一列数据
+			SQLGetData(hstmt, 2, SQL_C_CHAR, str2, 50, &len_str2);
+
+			for (int i = 0; i < 8; i++) {
+				a[i] = str1[i];
+			}
+			for (int i = 0; i < 6; i++) {
+				p[i] = str2[i];
+			}
+			if (strcmp(Account, a) == 0 && strcmp(Password, p) == 0 || strcmp(Account, a) == 0 && strcmp(Password, p) == 0)
+			{
+				printf("登录成功\n");
+				int x;
+				duankai();
+				printf("请输入:\n1:查询图书信息\n2:查询学生信息\n3:查询工作人员信息\n4:增加一条信息\n5:修改一条信息\n6:删除一条信息\n");
+				scanf("%d", &x);
+				switch (x)
+				{
+				case 1:
+				{ lianjie();
+				SQLCHAR sql1[] = { "use study" };
+				SQLCHAR sql2[] = { "select * from book" };
+
+				ret = SQLExecDirect(hstmt, sql1, SQL_NTS);
+				ret = SQLExecDirect(hstmt, sql2, SQL_NTS);
+				if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+				{
+					SQLCHAR str1[50], str2[50], str3[50], str4[50], str5[50];
+					SQLINTEGER len_str1, len_str2, len_str3, len_str4, len_str5;
+					while (SQLFetch(hstmt) != SQL_NO_DATA)
+					{
+						SQLGetData(hstmt, 1, SQL_C_CHAR, str1, 50, &len_str1);   //获取第一列数据
+						SQLGetData(hstmt, 2, SQL_C_CHAR, str2, 50, &len_str2);
+						SQLGetData(hstmt, 3, SQL_C_CHAR, str3, 50, &len_str3);
+						SQLGetData(hstmt, 4, SQL_C_CHAR, str4, 50, &len_str4);
+						SQLGetData(hstmt, 5, SQL_C_CHAR, str5, 50, &len_str5);
+						printf("%s\t%s\t%s\t%s\t%s\t\n", str1, str2, str3, str4, str5);
+					}
+				}
+				}
+				duankai(); break;
+				case 2:
+				{ lianjie();
+				SQLCHAR sql1[] = { "use study" };
+				SQLCHAR sql2[] = { "select * from reader" };
+
+				ret = SQLExecDirect(hstmt, sql1, SQL_NTS);
+				ret = SQLExecDirect(hstmt, sql2, SQL_NTS);
+				if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+				{
+					SQLCHAR str1[50], str2[50], str3[50], str4[50], str5[50];
+					SQLINTEGER len_str1, len_str2, len_str3, len_str4, len_str5;
+					while (SQLFetch(hstmt) != SQL_NO_DATA)
+					{
+						SQLGetData(hstmt, 1, SQL_C_CHAR, str1, 50, &len_str1);   //获取第一列数据
+						SQLGetData(hstmt, 2, SQL_C_CHAR, str2, 50, &len_str2);
+						SQLGetData(hstmt, 3, SQL_C_CHAR, str3, 50, &len_str3);
+						SQLGetData(hstmt, 4, SQL_C_CHAR, str4, 50, &len_str4);
+						SQLGetData(hstmt, 5, SQL_C_CHAR, str5, 50, &len_str5);
+						printf("%s\t%s\t%s\t%s\t%s\t\n", str1, str2, str3, str4, str5);
+					}
+				}
+				}duankai(); break;
+				case 3:
+				{ lianjie();
+				SQLCHAR sql1[] = { "use study" };
+				SQLCHAR sql2[] = { "select * from workman" };
+
+				ret = SQLExecDirect(hstmt, sql1, SQL_NTS);
+				ret = SQLExecDirect(hstmt, sql2, SQL_NTS);
+				if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+				{
+					SQLCHAR str1[50], str2[50], str3[50], str4[50];
+					SQLINTEGER len_str1, len_str2, len_str3, len_str4;
+					while (SQLFetch(hstmt) != SQL_NO_DATA)
+					{
+						SQLGetData(hstmt, 1, SQL_C_CHAR, str1, 50, &len_str1);   //获取第一列数据
+						SQLGetData(hstmt, 2, SQL_C_CHAR, str2, 50, &len_str2);
+						SQLGetData(hstmt, 3, SQL_C_CHAR, str3, 50, &len_str3);
+						SQLGetData(hstmt, 4, SQL_C_CHAR, str4, 50, &len_str4);
+						printf("%s\t%s\t%s\t%s\t\n", str1, str2, str3, str4);
+					}
+				}
+				}duankai(); break;
+				case 4:
+				{lianjie();
+				int g;
+				printf("请输入你想增加数据的表:\n1:图书信息表\n2:读者信息表\n3:工作人员表\n");
+				scanf("%d", &g);
+				switch (g)
+				{
+				case 1: {
+					char w[] = { " '," };
+					char b[] = { " ' " };
+					char i[] = { ")" };
+					SQLCHAR l[1000] = { "insert into dbo.book(b_no,b_name,author,publisher,price)values('" };
+					char d[50];
+					printf("请输入图书编号:\n");
+					scanf("%s", d);
+					strcat((char*)l, d);
+					strcat((char*)l, w);
+					char e[50];
+					printf("请输入图书名称:\n");
+					scanf("%s", e);
+					strcat((char*)l, b);
+					strcat((char*)l, e);
+					strcat((char*)l, w);
+					char r[50];
+					printf("请输入图书作者:\n");
+					scanf("%s", r);
+					strcat((char*)l, b);
+					strcat((char*)l, r);
+					strcat((char*)l, w);
+					char y[50];
+					printf("请输入图书出版社:\n");
+					scanf("%s", y);
+					strcat((char*)l, b);
+					strcat((char*)l, y);
+					strcat((char*)l, w);
+					char u[50];
+					printf("请输入图书价格:\n");
+					scanf("%s", u);
+					strcat((char*)l, b);
+					strcat((char*)l, u);
+					strcat((char*)l, b);
+					strcat((char*)l, i);
+					ret = SQLExecDirect(hstmt, l, SQL_NTS);
+					if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+					{
+						printf("操作成功\n");
+
+					}
+					else {
+						printf("操作失败\n");
+					}
+				}
+				case 2: {
+					char w[] = { " '," };
+					char b[] = { " ' " };
+					char i[] = { ")" };
+					SQLCHAR l[1000] = { "insert into dbo.reader(r_no,r_name,enabled,tele,pwd)values('" };
+					char d[50];
+					printf("请输入读者编号:\n");
+					scanf("%s", d);
+					strcat((char*)l, d);
+					strcat((char*)l, w);
+					char e[50];
+					printf("请输入读者姓名:\n");
+					scanf("%s", e);
+					strcat((char*)l, b);
+					strcat((char*)l, e);
+					strcat((char*)l, w);
+					char r[50];
+					printf("请输入证件是否有效:(on或者off）\n");
+					scanf("%s", r);
+					strcat((char*)l, b);
+					strcat((char*)l, r);
+					strcat((char*)l, w);
+					char y[50];
+					printf("请输入联系电话:\n");
+					scanf("%s", y);
+					strcat((char*)l, b);
+					strcat((char*)l, y);
+					strcat((char*)l, w);
+					char u[50];
+					printf("请输入登录密码:\n");
+					scanf("%s", u);
+					strcat((char*)l, b);
+					strcat((char*)l, u);
+					strcat((char*)l, b);
+					strcat((char*)l, i);
+					ret = SQLExecDirect(hstmt, l, SQL_NTS);
+					if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+					{
+						printf("操作成功\n");
+
+					}
+					else {
+						printf("操作失败\n");
+					}
+				}
+				case 3:
+				{
+					char w[] = { " '," };
+					char b[] = { " ' " };
+					char i[] = { ")" };
+					SQLCHAR l[1000] = { "insert into dbo.workman(work_no,work_name,tele,pwd)values('" };
+					char d[50];
+					printf("请输入工作证号:\n");
+					scanf("%s", d);
+					strcat((char*)l, d);
+					strcat((char*)l, w);
+					char e[50];
+					printf("请输入工人姓名:\n");
+					scanf("%s", e);
+					strcat((char*)l, b);
+					strcat((char*)l, e);
+					strcat((char*)l, w);
+					char r[50];
+					printf("请输入联系电话:\n");
+					scanf("%s", r);
+					strcat((char*)l, b);
+					strcat((char*)l, r);
+					strcat((char*)l, w);
+					char u[50];
+					printf("请输入登录密码:\n");
+					scanf("%s", u);
+					strcat((char*)l, b);
+					strcat((char*)l, u);
+					strcat((char*)l, b);
+					strcat((char*)l, i);
+					ret = SQLExecDirect(hstmt, l, SQL_NTS);
+					if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+					{
+						printf("操作成功\n");
+
+					}
+					else {
+						printf("操作失败\n");
+					}
+				}
+				break;
+               }
+			   duankai(); break;
+				case 5: {lianjie();
+					int g;
+					printf("请输入想重置密码人的身份:\n1:读者\n2:工作人员\n");
+					scanf("%d", &g);
+					switch (g)
+					{
+					case 1: {
+						SQLCHAR l[1000] = { "update dbo.reader set pwd =  " };
+						SQLCHAR k[1000] = { " where r_no =  " };
+						char d[50];
+						printf("请输入想修改密码的读者号:\n");
+						scanf("%s", d);
+						strcat((char*)k, d);
+						char e[50];
+						printf("请输入新密码:\n");
+						scanf("%s", e);
+						strcat((char*)l, e);
+						strcat((char*)l, (char*)k);
+						ret = SQLExecDirect(hstmt, l, SQL_NTS);
+						if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+						{
+							printf("操作成功\n");
+						}
+						else {
+							printf("操作失败\n");
+						}
+					}break;
+					case 2: {
+						SQLCHAR l[1000] = { "update dbo.workman set pwd =  " };
+						SQLCHAR k[1000] = { " where work_no =  " };
+						char d[50];
+						printf("请输入想修改密码的工作号:\n");
+						scanf("%s", d);
+						strcat((char*)k, d);
+						char e[50];
+						printf("请输入新密码:\n");
+						scanf("%s", e);
+						strcat((char*)l, e);
+						strcat((char*)l, (char*)k);
+						ret = SQLExecDirect(hstmt, l, SQL_NTS);
+						if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+						{
+							printf("操作成功\n");
+						}
+						else {
+							printf("操作失败\n");
+						}
+					}break;
+					}
+					}duankai();break;
+				case 6: {lianjie();
+					int g;
+					printf("请输入想删除信息的表:\n1:图书\n2:工作人员\n3:读者\n");
+					scanf("%d", &g);
+					switch (g)
+					{
+					case 1: {
+						SQLCHAR l[1000] = { "delete from dbo.book where b_no = " };
+						char d[50];
+						printf("请输入想删除的图书号:\n");
+						scanf("%s", d);
+						strcat((char*)l, d);
+						ret = SQLExecDirect(hstmt, l, SQL_NTS);
+						if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+						{
+							printf("操作成功\n");
+						}
+						else {
+							printf("操作失败\n");
+						}
+					}break;
+					case 2: {
+						SQLCHAR l[1000] = { "delete from dbo.workman where work_no = " };
+						char d[50];
+						printf("请输入想删除的工作证号:\n");
+						scanf("%s", d);
+						strcat((char*)l, d);
+						ret = SQLExecDirect(hstmt, l, SQL_NTS);
+						if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+						{
+							printf("操作成功\n");
+						}
+						else {
+							printf("操作失败\n");
+						}
+					}break;
+					case 3: {
+						SQLCHAR l[1000] = { "delete from dbo.reader where r_no = " };
+						char d[50];
+						printf("请输入想删除的读者号:\n");
+						scanf("%s", d);
+						strcat((char*)l, d);
+						ret = SQLExecDirect(hstmt, l, SQL_NTS);
+						if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+						{
+							printf("操作成功\n");
+						}
+						else {
+							printf("操作失败\n");
+						}
+					}break;
+					}
+				}duankai();break;
+				default:break;
+				}
+				}
+				break;
+				}
+			}
+		}; break;
+	}
+
+
+
+
+
+	case 2://工作人员登录系统模块
+	{ lianjie();
+	printf("请输入登录账号：\n");
+	scanf("%s", Account);
+	printf("请输入登录密码：\n");
+	scanf("%s", Password);
+	SQLCHAR sql3[] = "use study";
+	SQLCHAR sql4[] = "select work_no,pwd from workman";
+	ret = SQLExecDirect(hstmt, sql3, SQL_NTS);
+	ret = SQLExecDirect(hstmt, sql4, SQL_NTS);
+	if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+	{
+		SQLCHAR str1[50], str2[50];
+		SQLINTEGER len_str1, len_str2;
+		while (SQLFetch(hstmt) != SQL_NO_DATA)
+		{
+			SQLGetData(hstmt, 1, SQL_C_CHAR, str1, 50, &len_str1);   //获取第一列数据
+			SQLGetData(hstmt, 2, SQL_C_CHAR, str2, 50, &len_str2);
+
+			for (int i = 0; i < 8; i++) {
+				a[i] = str1[i];
+			}
+			for (int i = 0; i < 6; i++) {
+				p[i] = str2[i];
+			}
+			if (strcmp(Account, a) == 0 && strcmp(Password, p) == 0 || strcmp(Account, a) == 0 && strcmp(Password, p) == 0)
+			{
+				printf("登录成功\n");
+				int y;
+				duankai();
+				printf("请输入:\n1:办理借书\n2:办理还书\n3:罚款\n");
+				scanf("%d", &y);
+				switch (y)
+				{
+				case 1: {
+					char w[] = { " '," };
+					char b[] = { " ' " };
+					char i[] = { ")" };
+					SQLCHAR l[1000] = { "insert into dbo.borrow(b_no,r_no,[borrow date],[due date])values('" };
+					char d[50];
+					printf("请输入图书号:\n");
+					scanf("%s", d);
+					strcat((char*)l, d);
+					strcat((char*)l, w);
+					char e[50];
+					printf("请输入读者证号:\n");
+					scanf("%s", e);
+					strcat((char*)l, b);
+					strcat((char*)l, e);
+					strcat((char*)l, w);
+					char r[50];
+					printf("请输入借书日期:（格式为1900-01-01）\n");
+					scanf("%s", r);
+					strcat((char*)l, b);
+					strcat((char*)l, r);
+					strcat((char*)l, w);
+					char u[50];
+					printf("请输入应还日期:（格式为1900-01-01）\n");
+					scanf("%s", u);
+					strcat((char*)l, b);
+					strcat((char*)l, u);
+					strcat((char*)l, b);
+					strcat((char*)l, i);
+					ret = SQLExecDirect(hstmt, l, SQL_NTS);
+					if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+					{
+						printf("操作成功\n");
+
+					}
+					else {
+						printf("操作失败\n");
+					}
+				}break;
+				case 2: {
+					char w[] = { " '," };
+					char b[] = { " ' " };
+					char i[] = { ")" };
+					SQLCHAR l[1000] = { "insert into dbo.returnd(b_no,r_no,[return date]) values ('" };
+					char d[50];
+					printf("请输入图书号:\n");
+					scanf("%s", d);
+					strcat((char*)l, d);
+					strcat((char*)l, w);
+					char e[50];
+					printf("请输入读者证号:\n");
+					scanf("%s", e);
+					strcat((char*)l, b);
+					strcat((char*)l, e);
+					strcat((char*)l, w);
+					char u[50];
+					printf("请输入归还日期:（格式为1900-01-01）\n");
+					scanf("%s", u);
+					strcat((char*)l, b);
+					strcat((char*)l, u);
+					strcat((char*)l, b);
+					strcat((char*)l, i);
+					ret = SQLExecDirect(hstmt, l, SQL_NTS);
+					if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+					{
+						printf("操作成功\n");
+
+					}
+					else {
+						printf("操作失败\n");
+					}
+				}break;
+				case 3: {
+					char w[] = { " '," };
+					char b[] = { " ' " };
+					char i[] = { ")" };
+					SQLCHAR l[1000] = { "insert into dbo.fine(b_no,r_no,[fine money]values('','','')" };
+					char d[50];
+					printf("请输入图书号:\n");
+					scanf("%s", d);
+					strcat((char*)l, d);
+					strcat((char*)l, w);
+					char e[50];
+					printf("请输入读者证号:\n");
+					scanf("%s", e);
+					strcat((char*)l, b);
+					strcat((char*)l, e);
+					strcat((char*)l, w);
+					char u[50];
+					printf("请输入罚款金额:\n");
+					scanf("%s", u);
+					strcat((char*)l, b);
+					strcat((char*)l, u);
+					strcat((char*)l, b);
+					strcat((char*)l, i);
+					ret = SQLExecDirect(hstmt, l, SQL_NTS);
+					if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+					{
+						printf("操作成功\n");
+
+					}
+					else {
+						printf("操作失败\n");
+					}
+				}break;
+				default: break;
+				}
+			}
+		}
+
+	}
+	}; break;
+
+
+
+
+
+
+
+	case 3://读者登录系统模块
+	{
+		lianjie();
+		printf("请输入登录账号：\n");
+		scanf("%s", Account);
+		printf("请输入登录密码：\n");
+		scanf("%s", Password);
+		SQLCHAR sql3[] = "use study";
+		SQLCHAR sql4[] = "select r_no,pwd from reader";
+		ret = SQLExecDirect(hstmt, sql3, SQL_NTS);
+		ret = SQLExecDirect(hstmt, sql4, SQL_NTS);
+		if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+		{
+			SQLCHAR str1[50], str2[50];
+			SQLINTEGER len_str1, len_str2;
+			while (SQLFetch(hstmt) != SQL_NO_DATA)
+			{
+				SQLGetData(hstmt, 1, SQL_C_CHAR, str1, 50, &len_str1);   //获取第一列数据
+				SQLGetData(hstmt, 2, SQL_C_CHAR, str2, 50, &len_str2);
+
+				for (int i = 0; i < 8; i++) {
+					a[i] = str1[i];
+				}
+				for (int i = 0; i < 6; i++) {
+					p[i] = str2[i];
+				}
+				if (strcmp(Account, a) == 0 && strcmp(Password, p) == 0 || strcmp(Account, a) == 0 && strcmp(Password, p) == 0)
+				{
+					printf("登录成功\n");
+					int z;
+					duankai();
+					printf("请输入:\n1:查询图书信息\n2:查询借书信息\n3:借书\n4:还书\n");
+					scanf("%d", &z);
+					switch (z)
+					{
+					case 1:
+					{ lianjie();
+					SQLCHAR sql1[] = { "use study" };
+					SQLCHAR sql2[] = { "select * from book" };
+
+					ret = SQLExecDirect(hstmt, sql1, SQL_NTS);
+					ret = SQLExecDirect(hstmt, sql2, SQL_NTS);
+					if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+					{
+						SQLCHAR str1[50], str2[50], str3[50], str4[50], str5[50];
+						SQLINTEGER len_str1, len_str2, len_str3, len_str4, len_str5;
+						while (SQLFetch(hstmt) != SQL_NO_DATA)
+						{
+							SQLGetData(hstmt, 1, SQL_C_CHAR, str1, 50, &len_str1);   //获取第一列数据
+							SQLGetData(hstmt, 2, SQL_C_CHAR, str2, 50, &len_str2);
+							SQLGetData(hstmt, 3, SQL_C_CHAR, str3, 50, &len_str3);
+							SQLGetData(hstmt, 4, SQL_C_CHAR, str4, 50, &len_str4);
+							SQLGetData(hstmt, 5, SQL_C_CHAR, str5, 50, &len_str5);
+							printf("%s\t%s\t%s\t%s\t%s\t\n", str1, str2, str3, str4, str5);
+						}
+					}
+					};
+					duankai();
+					break;
+					case 2:
+					{ lianjie();
+					SQLCHAR sql1[] = { "use study" };
+					SQLCHAR sql2[] = { "select * from borrow" };
+
+					ret = SQLExecDirect(hstmt, sql1, SQL_NTS);
+					ret = SQLExecDirect(hstmt, sql2, SQL_NTS);
+					if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+					{
+						SQLCHAR str1[50], str2[50], str3[50];
+						SQLINTEGER len_str1, len_str2, len_str3;
+						while (SQLFetch(hstmt) != SQL_NO_DATA)
+						{
+							SQLGetData(hstmt, 1, SQL_C_CHAR, str1, 50, &len_str1);   //获取第一列数据
+							SQLGetData(hstmt, 2, SQL_C_CHAR, str2, 50, &len_str2);
+							SQLGetData(hstmt, 3, SQL_C_CHAR, str3, 50, &len_str3);
+							printf("%s\t%s\t%s\t\n", str1, str2, str3);
+						}
+					}
+					};
+					duankai();
+					break;
+					case 3: {
+						char w[] = { " '," };
+						char b[] = { " ' " };
+						char i[] = { ")" };
+						SQLCHAR l[1000] = { "insert into dbo.borrow(b_no,r_no,[borrow date],[due date])values('" };
+						char d[50];
+						printf("请输入图书号:\n");
+						scanf("%s", d);
+						strcat((char*)l, d);
+						strcat((char*)l, w);
+						char e[50];
+						printf("请输入读者证号:\n");
+						scanf("%s", e);
+						strcat((char*)l, b);
+						strcat((char*)l, e);
+						strcat((char*)l, w);
+						char r[50];
+						printf("请输入借书日期:（格式为1900-01-01）\n");
+						scanf("%s", r);
+						strcat((char*)l, b);
+						strcat((char*)l, r);
+						strcat((char*)l, w);
+						char u[50];
+						printf("请输入应还日期:（格式为1900-01-01）\n");
+						scanf("%s", u);
+						strcat((char*)l, b);
+						strcat((char*)l, u);
+						strcat((char*)l, b);
+						strcat((char*)l, i);
+						ret = SQLExecDirect(hstmt, l, SQL_NTS);
+						if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+						{
+							printf("操作成功\n");
+
+						}
+						else {
+							printf("操作失败\n");
+						}
+					}break;
+					case 4: {
+						char w[] = { " '," };
+						char b[] = { " ' " };
+						char i[] = { ")" };
+						SQLCHAR l[1000] = { "insert into dbo.returnd(b_no,r_no,[return date]) values ('" };
+						char d[50];
+						printf("请输入图书号:\n");
+						scanf("%s", d);
+						strcat((char*)l, d);
+						strcat((char*)l, w);
+						char e[50];
+						printf("请输入读者证号:\n");
+						scanf("%s", e);
+						strcat((char*)l, b);
+						strcat((char*)l, e);
+						strcat((char*)l, w);
+						char u[50];
+						printf("请输入归还日期:（格式为1900-01-01）\n");
+						scanf("%s", u);
+						strcat((char*)l, b);
+						strcat((char*)l, u);
+						strcat((char*)l, b);
+						strcat((char*)l, i);
+						ret = SQLExecDirect(hstmt, l, SQL_NTS);
+						if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+						{
+							printf("操作成功\n");
+
+						}
+						else {
+							printf("操作失败\n");
+						}
+					}break;
+					default: break;
+					}
+				}
+			}
+		}
+	}; break;
+	return 0;
+		}
+      }
+	
