@@ -1,0 +1,6 @@
+1 安装net-tools
+2 安装gcc g++
+3 安装vim
+4 安装QT,写一个hellowrod程序，判断是否有依赖库需要安装
+5 安装WPS
+6 安装搜狗拼音

@@ -1,0 +1,2103 @@
+{
+    "name": "性能规划",
+    "TasksList-S": "任务列表开始",
+    "mTasks": [
+        {
+            "id":255,
+            "timeSyncId": 2010,
+            "timeOffset": 0,
+            "members":[
+                { "id" : 41000 , "type" : 3 },
+                { "id" : 2010 , "type" : 2 }
+            ]
+        },
+        {
+            "id": 1,
+            "timeSyncId": 2001,
+            "timeOffset": 12000,
+            "memberCnt": 58,
+            "members": [
+                { "id" : 1001 , "type" : 1 },
+                { "id" : 1002 , "type" : 1 },
+                { "id" : 1003 , "type" : 1 },
+                { "id" : 1004 , "type" : 1 },
+                { "id" : 1005 , "type" : 1 },
+                { "id" : 1006 , "type" : 1 },
+                { "id" : 1007 , "type" : 1 },
+                { "id" : 1008 , "type" : 1 },
+                { "id" : 1009 , "type" : 1 },
+                { "id" : 1010 , "type" : 1 },
+                { "id" : 1011 , "type" : 1 },
+                { "id" : 1012 , "type" : 1 },
+                { "id" : 1013 , "type" : 1 },
+                { "id" : 1014 , "type" : 1 },
+                { "id" : 1015 , "type" : 1 },
+                { "id" : 1016 , "type" : 1 },
+                { "id" : 1017 , "type" : 1 },
+                { "id" : 1018 , "type" : 1 },
+                { "id" : 1019 , "type" : 1 },
+                { "id" : 1020 , "type" : 1 },
+                { "id" : 1021 , "type" : 1 },
+                { "id" : 1022 , "type" : 1 },
+                { "id" : 1023 , "type" : 1 },
+                { "id" : 1024 , "type" : 1 },
+                { "id" : 1025 , "type" : 1 },
+                { "id" : 1026 , "type" : 1 },
+                { "id" : 1027 , "type" : 1 },
+                { "id" : 1028 , "type" : 1 },
+                { "id" : 1029 , "type" : 1 },
+                { "id" : 1030 , "type" : 1 },
+                { "id" : 1031 , "type" : 1 },
+                { "id" : 1032 , "type" : 1 },
+                { "id" : 1033 , "type" : 1 },
+                { "id" : 1034 , "type" : 1 },
+                { "id" : 1035 , "type" : 1 },
+                { "id" : 1036 , "type" : 1 },
+                { "id" : 1037 , "type" : 1 },
+                { "id" : 1038 , "type" : 1 },
+                { "id" : 1039 , "type" : 1 },
+                { "id" : 1040 , "type" : 1 },
+                { "id" : 1041 , "type" : 1 },
+                { "id" : 1042 , "type" : 1 },
+                { "id" : 1043 , "type" : 1 },
+                { "id" : 1044 , "type" : 1 },
+                { "id" : 1045 , "type" : 1 },
+                { "id" : 1046 , "type" : 1 },
+                { "id" : 1047 , "type" : 1 },
+                { "id" : 1048 , "type" : 1 },
+                { "id" : 1049 , "type" : 1 },
+                { "id" : 1050 , "type" : 1 },
+
+                { "id" : 2001 , "type" : 2 },
+                { "id" : 2003 , "type" : 2 },
+                { "id" : 2005 , "type" : 2 },
+                { "id" : 2007 , "type" : 2 },
+                { "id" : 2009 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 },
+                { "id" : 32002 , "type" : 3 },
+                { "id" : 33003 , "type" : 3 }                
+            ]
+        },
+        {
+            "id": 2,
+            "timeSyncId": 2004,
+            "timeOffset": 0,
+            "memberCnt": 57,
+            "members": [
+                { "id" : 1051 , "type" : 1 },
+                { "id" : 1052 , "type" : 1 },
+                { "id" : 1053 , "type" : 1 },
+                { "id" : 1054 , "type" : 1 },
+                { "id" : 1055 , "type" : 1 },
+                { "id" : 1056 , "type" : 1 },
+                { "id" : 1057 , "type" : 1 },
+                { "id" : 1058 , "type" : 1 },
+                { "id" : 1059 , "type" : 1 },
+                { "id" : 1060 , "type" : 1 },
+                { "id" : 1061 , "type" : 1 },
+                { "id" : 1062 , "type" : 1 },
+                { "id" : 1063 , "type" : 1 },
+                { "id" : 1064 , "type" : 1 },
+                { "id" : 1065 , "type" : 1 },
+                { "id" : 1066 , "type" : 1 },
+                { "id" : 1067 , "type" : 1 },
+                { "id" : 1068 , "type" : 1 },
+                { "id" : 1069 , "type" : 1 },
+                { "id" : 1070 , "type" : 1 },
+                { "id" : 1071 , "type" : 1 },
+                { "id" : 1072 , "type" : 1 },
+                { "id" : 1073 , "type" : 1 },
+                { "id" : 1074 , "type" : 1 },
+                { "id" : 1075 , "type" : 1 },
+                { "id" : 1076 , "type" : 1 },
+                { "id" : 1077 , "type" : 1 },
+                { "id" : 1078 , "type" : 1 },
+                { "id" : 1079 , "type" : 1 },
+                { "id" : 1080 , "type" : 1 },
+                { "id" : 1081 , "type" : 1 },
+                { "id" : 1082 , "type" : 1 },
+                { "id" : 1083 , "type" : 1 },
+                { "id" : 1084 , "type" : 1 },
+                { "id" : 1085 , "type" : 1 },
+                { "id" : 1086 , "type" : 1 },
+                { "id" : 1087 , "type" : 1 },
+                { "id" : 1088 , "type" : 1 },
+                { "id" : 1089 , "type" : 1 },
+                { "id" : 1090 , "type" : 1 },
+                { "id" : 1091 , "type" : 1 },
+                { "id" : 1092 , "type" : 1 },
+                { "id" : 1093 , "type" : 1 },
+                { "id" : 1094 , "type" : 1 },
+                { "id" : 1095 , "type" : 1 },
+                { "id" : 1096 , "type" : 1 },
+                { "id" : 1097 , "type" : 1 },
+                { "id" : 1098 , "type" : 1 },
+                { "id" : 1099 , "type" : 1 },
+                { "id" : 1100 , "type" : 1 },
+
+                { "id" : 2002 , "type" : 2 },
+                { "id" : 2004 , "type" : 2 },
+                { "id" : 2006 , "type" : 2 },
+                { "id" : 2008 , "type" : 2 },
+                { "id" : 2010 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }             
+            ]
+        }
+    ],
+    "TasksList-E" : "任务列表结束",
+
+    "SubNets-S" : "性能子网列表开始",
+    "subnets": [
+        {
+            "Type1Net-S" : "态势功能子网列表开始"
+        },
+        {
+            "type": 1,
+            "id": 1,
+            "taskId": 1,
+            "capacity": 6000,
+            "prop": 1,
+            "memberCnt": 12,
+            "members": [
+                { "id": 1001, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1002, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1003, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1004, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1005, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1006, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1007, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1008, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1009, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1010, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+
+                { "id": 2001, "type": 2 },
+
+                { "id": 31001, "type": 3 }
+            ]
+        },
+        {
+            "type": 1,
+            "id": 2,
+            "taskId": 1,
+            "capacity": 6000,
+            "prop": 2,
+            "memberCnt": 13,
+            "members": [
+                { "id": 1011, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1012, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1013, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1014, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1015, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1016, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1017, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1018, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1019, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1020, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+
+                { "id": 2003, "type": 2 },
+
+                { "id": 31001, "type": 3 },
+                { "id": 32002, "type": 3 }
+            ]
+        },
+        {
+            "type": 1,
+            "id": 3,
+            "taskId": 1,
+            "capacity": 6000,
+            "prop": 3,
+            "memberCnt": 13,
+            "members": [
+                { "id": 1021, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1022, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1023, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1024, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1025, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1026, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1027, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1028, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1029, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1030, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+
+                { "id": 2005, "type": 2 },
+
+                { "id": 31001, "type": 3 },
+                { "id": 33003, "type": 3 }
+            ]
+        },
+        {
+            "type": 1,
+            "id": 4,
+            "taskId": 1,
+            "capacity": 6000,
+            "prop": 4,
+            "memberCnt": 13,
+            "members": [
+                { "id": 1031, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1032, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1033, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1034, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1035, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1036, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1037, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1038, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1039, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1040, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+
+                { "id": 2001, "type": 2 },
+                { "id": 2007, "type": 2 },
+
+                { "id": 31001, "type": 3 }
+            ]
+        },
+        {
+            "type": 1,
+            "id": 5,
+            "taskId": 1,
+            "capacity": 6000,
+            "prop": 1,
+            "memberCnt": 14,
+            "members": [
+                { "id": 1041, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1042, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1043, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1044, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1045, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1046, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1047, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1048, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1049, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1050, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+
+                { "id": 2001, "type": 2 },
+                { "id": 2009, "type": 2 },
+
+                { "id": 31001, "type": 3 },
+                { "id": 32002, "type": 3 }
+            ]
+        },
+        {
+            "type": 1,
+            "id": 6,
+            "taskId": 2,
+            "capacity": 6000,
+            "prop": 2,
+            "memberCnt": 12,
+            "members": [
+                { "id": 1051, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1052, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1053, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1054, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1055, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1056, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1057, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1058, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1059, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1060, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+
+                { "id": 2002, "type": 2 },
+
+                { "id": 31004, "type": 3 }
+            ]
+        },
+        {
+            "type": 1,
+            "id": 7,
+            "taskId": 2,
+            "capacity": 6000,
+            "prop": 3,
+            "memberCnt": 13,
+            "members": [
+                { "id": 1061, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1062, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1063, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1064, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1065, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1066, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1067, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1068, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1069, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1070, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+
+                { "id": 2004, "type": 2 },
+
+                { "id": 31004, "type": 3 },
+                { "id": 32005, "type": 3 }
+            ]
+        },
+        {
+            "type": 1,
+            "id": 8,
+            "taskId": 2,
+            "capacity": 6000,
+            "prop": 4,
+            "memberCnt": 13,
+            "members": [
+                { "id": 1071, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1072, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1073, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1074, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1075, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1076, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1077, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1078, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1079, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1080, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+
+                { "id": 2006, "type": 2 },
+
+                { "id": 31004, "type": 3 },
+                { "id": 32005, "type": 3 }
+            ]
+        },
+        {
+            "type": 1,
+            "id": 9,
+            "taskId": 2,
+            "capacity": 6000,
+            "prop": 1,
+            "memberCnt": 13,
+            "members": [
+                { "id": 1081, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1082, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1083, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1084, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1085, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1086, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1087, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1088, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1089, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1090, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+
+                { "id": 2002, "type": 2 },
+                { "id": 2008, "type": 2 },
+
+                { "id": 31004, "type": 3 }
+            ]
+        },
+        {
+            "type": 1,
+            "id": 10,
+            "taskId": 2,
+            "capacity": 6000,
+            "prop": 2,
+            "memberCnt": 14,
+            "members": [
+                { "id": 1091, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1092, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1093, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1094, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1095, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1096, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1097, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1098, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1099, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1100, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+
+                { "id": 2002, "type": 2 },
+                { "id": 2010, "type": 2 },
+
+                { "id": 31004, "type": 3 },
+                { "id": 32005, "type": 3 }
+            ]
+        },
+        {
+            "Type1Net-E" : "态势功能子网列表结束",
+            "Type2Net-S" : "指挥控制子网列表开始"
+        },
+        {
+            "type": 2,
+            "id": 11,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 4,
+            "members": [
+                { "id": 1001, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1002, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+
+                { "id": 2001, "type": 2 },
+
+                { "id": 31001, "type": 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 12,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1003 , "type" : 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id" : 1004 , "type" : 1 , "channelCnt" : 2, "channels" : [1,2] },
+
+                { "id" : 2003 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 },
+                { "id" : 32002 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 13,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1005 , "type" : 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id" : 1006 , "type" : 1 , "channelCnt" : 2, "channels" : [1,2] },
+
+                { "id" : 2005 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 },
+                { "id" : 33003 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 14,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 4,
+            "members": [
+                { "id" : 1007 , "type" : 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id" : 1008 , "type" : 1 , "channelCnt" : 2, "channels" : [1,2] },
+
+                { "id" : 2007 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 15,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1009 , "type" : 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id" : 1010 , "type" : 1 , "channelCnt" : 2, "channels" : [1,2] },
+
+                { "id" : 2009 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 },
+                { "id" : 32002 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 16,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 4,
+            "members": [
+                { "id" : 1011 , "type" : 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id" : 1012 , "type" : 1 , "channelCnt" : 2, "channels" : [3,4] },
+
+                { "id" : 2001 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 17,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id": 1013, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1014, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+
+                { "id": 2003, "type": 2 },
+
+                { "id": 31001, "type": 3 },
+                { "id": 32002, "type": 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 18,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1015 , "type" : 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id" : 1016 , "type" : 1 , "channelCnt" : 2, "channels" : [3,4] },
+
+                { "id" : 2005 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 },
+                { "id" : 32002 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 19,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1017 , "type" : 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id" : 1018 , "type" : 1 , "channelCnt" : 2, "channels" : [3,4] },
+
+                { "id" : 2007 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 },
+                { "id" : 32002 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 20,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 4,
+            "members": [
+                { "id" : 1019 , "type" : 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id" : 1020 , "type" : 1 , "channelCnt" : 2, "channels" : [3,4] },
+
+                { "id" : 2009 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 21,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 4,
+            "members": [
+                { "id" : 1021 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id" : 1022 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+
+                { "id" : 2001 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 22,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1023 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id" : 1024 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+
+                { "id" : 2003 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 },
+                { "id" : 32002 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 23,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id": 1025, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1026, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+
+                { "id": 2005, "type": 2 },
+
+                { "id": 31001, "type": 3 },
+                { "id": 33003, "type": 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 24,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 4,
+            "members": [
+                { "id" : 1027 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id" : 1028 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+
+                { "id" : 2007 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 25,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1029 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id" : 1030 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+
+                { "id" : 2009 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 },
+                { "id" : 32002 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 26,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 4,
+            "members": [
+                { "id" : 1031 , "type" : 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id" : 1032 , "type" : 1 , "channelCnt" : 2, "channels" : [7,8] },
+
+                { "id" : 2001 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 27,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1033 , "type" : 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id" : 1034 , "type" : 1 , "channelCnt" : 2, "channels" : [7,8] },
+
+                { "id" : 2003 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 },
+                { "id" : 32002 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 28,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1035 , "type" : 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id" : 1036 , "type" : 1 , "channelCnt" : 2, "channels" : [7,8] },
+
+                { "id" : 2005 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 },
+                { "id" : 32002 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 29,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id": 1037, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1038, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+
+                { "id": 2007, "type": 2 },
+
+                { "id": 31001, "type": 3 },
+                { "id": 32002, "type": 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 30,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 4,
+            "members": [
+                { "id" : 1039 , "type" : 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id" : 1040 , "type" : 1 , "channelCnt" : 2, "channels" : [7,8] },
+
+                { "id" : 2009 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 31,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 4,
+            "members": [
+                { "id" : 1041 , "type" : 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id" : 1042 , "type" : 1 , "channelCnt" : 2, "channels" : [9,10] },
+
+                { "id" : 2001 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 32,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1043 , "type" : 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id" : 1044 , "type" : 1 , "channelCnt" : 2, "channels" : [9,10] },
+
+                { "id" : 2003 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 },
+                { "id" : 32002 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 33,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1045 , "type" : 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id" : 1046 , "type" : 1 , "channelCnt" : 2, "channels" : [9,10] },
+
+                { "id" : 2005 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 },
+                { "id" : 33003 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 34,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 4,
+            "members": [
+                { "id" : 1047 , "type" : 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id" : 1048 , "type" : 1 , "channelCnt" : 2, "channels" : [9,10] },
+
+                { "id" : 2007 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 35,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id": 1049, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1050, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+
+                { "id": 2009, "type": 2 },
+                
+                { "id": 31001, "type": 3 },
+                { "id": 32002, "type": 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 36,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 4,
+            "members": [
+                { "id" : 1051 , "type" : 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id" : 1052 , "type" : 1 , "channelCnt" : 2, "channels" : [11,12] },
+
+                { "id" : 2002 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 37,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1053 , "type" : 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id" : 1054 , "type" : 1 , "channelCnt" : 2, "channels" : [11,12] },
+
+                { "id" : 2004 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 38,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1055 , "type" : 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id" : 1056 , "type" : 1 , "channelCnt" : 2, "channels" : [11,12] },
+
+                { "id" : 2006 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 39,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1057 , "type" : 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id" : 1058 , "type" : 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id" : 1059 , "type" : 1 , "channelCnt" : 2, "channels" : [11,12] },
+
+                { "id" : 2008 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 40,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1060 , "type" : 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id" : 1061 , "type" : 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id" : 1062 , "type" : 1 , "channelCnt" : 2, "channels" : [13,14] },
+
+                { "id" : 2010 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 41,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id": 1063, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1064, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1065, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+
+                { "id": 2002, "type": 2 },
+
+                { "id": 31004, "type": 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 42,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 6,
+            "members": [
+                { "id": 1066, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1067, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1068, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+
+                { "id" : 2004 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 43,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 6,
+            "members": [
+                { "id": 1069, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1070, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1071, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+
+                { "id" : 2006 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 33006 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 44,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 6,
+            "members": [
+                { "id": 1072, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1073, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1074, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+
+                { "id" : 2008 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 45,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 6,
+            "members": [
+                { "id": 1075, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1076, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1077, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+
+                { "id" : 2010 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 46,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id": 1078, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1079, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1080, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+
+                { "id" : 2002 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 47,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id": 1081, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1082, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+
+                { "id": 2004, "type": 2 },
+
+                { "id": 31004, "type": 3 },
+                { "id": 32005, "type": 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 48,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 7,
+            "members": [
+                { "id" : 1083 , "type" : 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id" : 1084 , "type" : 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id" : 1085 , "type" : 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id" : 1086 , "type" : 1 , "channelCnt" : 2, "channels" : [3,4] },
+
+                { "id" : 2006 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 49,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1087 , "type" : 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id" : 1088 , "type" : 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id" : 1089 , "type" : 1 , "channelCnt" : 2, "channels" : [3,4] },
+
+                { "id" : 2008 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 50,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 6,
+            "members": [
+                { "id" : 1090 , "type" : 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id" : 1091 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id" : 1092 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+
+                { "id" : 2010 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 51,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 7,
+            "members": [
+                { "id" : 1093 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id" : 1094 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id" : 1095 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id" : 1096 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+
+                { "id" : 2002 , "type" : 2 },
+                { "id" : 2004 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 52,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 9,
+            "members": [
+                { "id" : 1097 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id" : 1098 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id" : 1099 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id" : 1100 , "type" : 1 , "channelCnt" : 2, "channels" : [5,6] },
+
+                { "id" : 2006 , "type" : 2 },
+                { "id" : 2008 , "type" : 2 },
+                { "id" : 2010 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }
+            ]
+        },
+        {
+            "Type2Net-E" : "指挥控制子网列表结束",
+            "Type3Net-S" : "文电功能子网列表开始"
+        },
+        {
+            "type": 3,
+            "id": 53,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 12,
+            "members": [
+                { "id": 1001, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1002, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1003, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1004, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1005, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1006, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1007, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1008, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1009, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1010, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+
+                { "id": 2001, "type": 2 },
+
+                { "id": 31001, "type": 3 }
+            ]
+        },
+        {
+            "type": 3,
+            "id": 54,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 12,
+            "members": [
+                { "id": 1011, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1012, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1013, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1014, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1015, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1016, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1017, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1018, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1019, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1020, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+
+                { "id": 2003, "type": 2 },
+
+                { "id": 31001, "type": 3 }
+            ]
+        },
+        {
+            "type": 3,
+            "id": 55,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 13,
+            "members": [
+                { "id": 1021, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1022, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1023, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1024, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1025, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1026, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1027, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1028, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1029, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1030, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+
+                { "id" : 2005 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 },
+                { "id" : 32002 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 3,
+            "id": 56,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 13,
+            "members": [
+                { "id": 1031, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1032, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1033, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1034, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1035, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1036, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1037, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1038, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1039, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1040, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+
+                { "id": 2007, "type": 2 },
+
+                { "id": 31001, "type": 3 },
+                { "id": 33003, "type": 3 }
+            ]
+        },
+        {
+            "type": 3,
+            "id": 57,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 14,
+            "members": [
+                { "id": 1041, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1042, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1043, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1044, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1045, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1046, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1047, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1048, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1049, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1050, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+
+                { "id": 2001, "type": 2 },
+                { "id": 2009, "type": 2 },
+
+                { "id": 31001, "type": 3 },
+                { "id": 32002, "type": 3 }
+            ]
+        },
+        {
+            "type": 3,
+            "id": 58,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 12,
+            "members": [
+                { "id": 1051, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1052, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1053, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1054, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1055, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1056, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1057, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1058, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1059, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1060, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+
+                { "id" : 2002 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 3,
+            "id": 59,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 13,
+            "members": [
+                { "id": 1061, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1062, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1063, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1064, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1065, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1066, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1067, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1068, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1069, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1070, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+
+                { "id": 2004, "type": 2 },
+
+                { "id": 31004, "type": 3 },
+                { "id": 32005, "type": 3 }
+            ]
+        },
+        {
+            "type": 3,
+            "id": 60,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 13,
+            "members": [
+                { "id": 1071, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1072, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1073, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1074, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1075, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1076, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1077, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1078, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1079, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1080, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+
+                { "id": 2006, "type": 2 },
+
+                { "id": 31004, "type": 3 },
+                { "id": 32005, "type": 3 }
+            ]
+        },
+        {
+            "type": 3,
+            "id": 61,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 14,
+            "members": [
+                { "id": 1081, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1082, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1083, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1084, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1085, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1086, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1087, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1088, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1089, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1090, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+
+                { "id" : 2002 , "type" : 2 },
+                { "id" : 2008 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 3,
+            "id": 62,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 14,
+            "members": [
+                { "id": 1091, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1092, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1093, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1094, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1095, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1096, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1097, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1098, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1099, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1100, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+
+                { "id" : 2002 , "type" : 2 },
+                { "id" : 2010 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }
+            ]
+        },
+        {
+            "Type3Net-E" : "文电功能子网列表结束",
+            "Type4Net-S" : "指挥协同子网列表开始"
+        },
+        {
+            "type": 4,
+            "id": 63,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 12,
+            "members": [
+                { "id": 1001, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1002, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1003, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1004, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1005, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1006, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1007, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1008, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1009, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1010, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+
+                { "id": 2001, "type": 2 },
+
+                { "id": 31001, "type": 3 }
+            ]
+        },
+        {
+            "type": 4,
+            "id": 64,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 12,
+            "members": [
+                { "id": 1011, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1012, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1013, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1014, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1015, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1016, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1017, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1018, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1019, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1020, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+
+                { "id": 2003, "type": 2 },
+
+                { "id": 31001, "type": 3 }
+            ]
+        },
+        {
+            "type": 4,
+            "id": 65,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 13,
+            "members": [
+                { "id": 1021, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1022, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1023, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1024, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1025, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1026, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1027, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1028, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1029, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1030, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+
+                { "id" : 2005 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 },
+                { "id" : 32002 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 4,
+            "id": 66,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 13,
+            "members": [
+                { "id": 1031, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1032, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1033, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1034, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1035, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1036, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1037, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1038, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1039, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+                { "id": 1040, "type": 1 , "channelCnt" : 2, "channels" : [7,8] },
+
+                { "id": 2007, "type": 2 },
+
+                { "id": 31001, "type": 3 },
+                { "id": 33003, "type": 3 }
+            ]
+        },
+        {
+            "type": 4,
+            "id": 67,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 14,
+            "members": [
+                { "id": 1041, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1042, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1043, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1044, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1045, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1046, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1047, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1048, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1049, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+                { "id": 1050, "type": 1 , "channelCnt" : 2, "channels" : [9,10] },
+
+                { "id": 2001, "type": 2 },
+                { "id": 2009, "type": 2 },
+
+                { "id": 31001, "type": 3 },
+                { "id": 32002, "type": 3 }
+            ]
+        },
+        {
+            "type": 4,
+            "id": 68,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 12,
+            "members": [
+                { "id": 1051, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1052, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1053, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1054, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1055, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1056, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1057, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1058, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1059, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+                { "id": 1060, "type": 1 , "channelCnt" : 2, "channels" : [11,12] },
+
+                { "id" : 2002 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 4,
+            "id": 69,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 13,
+            "members": [
+                { "id": 1061, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1062, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1063, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1064, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1065, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1066, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1067, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1068, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1069, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+                { "id": 1070, "type": 1 , "channelCnt" : 2, "channels" : [13,14] },
+
+                { "id": 2004, "type": 2 },
+
+                { "id": 31004, "type": 3 },
+                { "id": 32005, "type": 3 }
+            ]
+        },
+        {
+            "type": 4,
+            "id": 70,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 13,
+            "members": [
+                { "id": 1071, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1072, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1073, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1074, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1075, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1076, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1077, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1078, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1079, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+                { "id": 1080, "type": 1 , "channelCnt" : 2, "channels" : [1,2] },
+
+                { "id": 2006, "type": 2 },
+
+                { "id": 31004, "type": 3 },
+                { "id": 32005, "type": 3 }
+            ]
+        },
+        {
+            "type": 4,
+            "id": 71,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 14,
+            "members": [
+                { "id": 1081, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1082, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1083, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1084, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1085, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1086, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1087, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1088, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1089, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+                { "id": 1090, "type": 1 , "channelCnt" : 2, "channels" : [3,4] },
+
+                { "id" : 2002 , "type" : 2 },
+                { "id" : 2008 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 4,
+            "id": 72,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 14,
+            "members": [
+                { "id": 1091, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1092, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1093, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1094, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1095, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1096, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1097, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1098, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1099, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+                { "id": 1100, "type": 1 , "channelCnt" : 2, "channels" : [5,6] },
+
+                { "id" : 2002 , "type" : 2 },
+                { "id" : 2010 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }
+            ]
+        },
+        {
+            "Type4Net-E" : "指挥协同子网列表结束"
+        }
+    ],
+    "Type5Net-S" : "话音功能子网列表开始",
+    "voiceNets":
+    [
+        {
+            "id": 73,
+            "speechId": 1,
+            "channelId": 1,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50101,
+                    "centerId": 2001
+                }
+            ]
+        },
+        {
+            "id": 74,
+            "speechId": 2,
+            "channelId": 1,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50102,
+                    "centerId": 2001
+                }
+            ]
+        },
+        {
+            "id": 75,
+            "speechId": 3,
+            "channelId": 1,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50103,
+                    "centerId": 2001
+                }
+            ]
+        },
+        {
+            "id": 76,
+            "speechId": 4,
+            "channelId": 1,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50104,
+                    "centerId": 2001
+                }
+            ]
+        },
+        {
+            "id": 77,
+            "speechId": 5,
+            "channelId": 2,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50201,
+                    "centerId": 2002
+                }
+            ]
+        },
+        {
+            "id": 78,
+            "speechId": 6,
+            "channelId": 2,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50202,
+                    "centerId": 2002
+                }
+            ]
+        },
+        {
+            "id": 79,
+            "speechId": 7,
+            "channelId": 2,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50203,
+                    "centerId": 2002
+                }
+            ]
+        },
+        {
+            "id": 80,
+            "speechId": 8,
+            "channelId": 2,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50204,
+                    "centerId": 2002
+                }
+            ]
+        },
+        {
+            "id": 81,
+            "speechId": 9,
+            "channelId": 3,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50301,
+                    "centerId": 2003
+                }
+            ]
+        },
+        {
+            "id": 82,
+            "speechId": 10,
+            "channelId": 3,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50302,
+                    "centerId": 2003
+                }
+            ]
+        },
+        {
+            "id": 83,
+            "speechId": 11,
+            "channelId": 3,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50303,
+                    "centerId": 2003
+                }
+            ]
+        },
+        {
+            "id": 84,
+            "speechId": 12,
+            "channelId": 3,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50304,
+                    "centerId": 2003
+                }
+            ]
+        },
+        {
+            "id": 85,
+            "speechId": 13,
+            "channelId": 4,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50401,
+                    "centerId": 2004
+                }
+            ]
+        },
+        {
+            "id": 86,
+            "speechId": 14,
+            "channelId": 4,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50402,
+                    "centerId": 2004
+                }
+            ]
+        },
+        {
+            "id": 87,
+            "speechId": 15,
+            "channelId": 4,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50403,
+                    "centerId": 2004
+                }
+            ]
+        },
+        {
+            "id": 88,
+            "speechId": 16,
+            "channelId": 4,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50404,
+                    "centerId": 2004
+                }
+            ]
+        },
+        {
+            "id": 89,
+            "speechId": 17,
+            "channelId": 5,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50501,
+                    "centerId": 2005
+                }
+            ]
+        },
+        {
+            "id": 90,
+            "speechId": 18,
+            "channelId": 5,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50502,
+                    "centerId": 2005
+                }
+            ]
+        },
+        {
+            "id": 91,
+            "speechId": 19,
+            "channelId": 5,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50503,
+                    "centerId": 2005
+                }
+            ]
+        },
+        {
+            "id": 92,
+            "speechId": 20,
+            "channelId": 5,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50504,
+                    "centerId": 2005
+                }
+            ]
+        },
+        {
+            "id": 93,
+            "speechId": 21,
+            "channelId": 6,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50601,
+                    "centerId": 2006
+                }
+            ]
+        },
+        {
+            "id": 94,
+            "speechId": 22,
+            "channelId": 6,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50602,
+                    "centerId": 2006
+                }
+            ]
+        },
+        {
+            "id": 95,
+            "speechId": 23,
+            "channelId": 6,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50603,
+                    "centerId": 2006
+                }
+            ]
+        },
+        {
+            "id": 96,
+            "speechId": 24,
+            "channelId": 6,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50604,
+                    "centerId": 2006
+                }
+            ]
+        },
+        {
+            "id": 97,
+            "speechId": 25,
+            "channelId": 7,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50701,
+                    "centerId": 2007
+                }
+            ]
+        },
+        {
+            "id": 98,
+            "speechId": 26,
+            "channelId": 7,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50702,
+                    "centerId": 2007
+                }
+            ]
+        },
+        {
+            "id": 99,
+            "speechId": 27,
+            "channelId": 7,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50703,
+                    "centerId": 2007
+                }
+            ]
+        },
+        {
+            "id": 100,
+            "speechId": 28,
+            "channelId": 7,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50704,
+                    "centerId": 2007
+                }
+            ]
+        },
+        {
+            "id": 101,
+            "speechId": 29,
+            "channelId": 8,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50801,
+                    "centerId": 2008
+                }
+            ]
+        },
+        {
+            "id": 102,
+            "speechId": 30,
+            "channelId": 8,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50802,
+                    "centerId": 2008
+                }
+            ]
+        },
+        {
+            "id": 103,
+            "speechId": 31,
+            "channelId": 8,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50803,
+                    "centerId": 2008
+                }
+            ]
+        },
+        {
+            "id": 104,
+            "speechId": 32,
+            "channelId": 8,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50804,
+                    "centerId": 2008
+                }
+            ]
+        },
+        {
+            "id": 105,
+            "speechId": 33,
+            "channelId": 9,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50901,
+                    "centerId": 2009
+                }
+            ]
+        },
+        {
+            "id": 106,
+            "speechId": 34,
+            "channelId": 9,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50902,
+                    "centerId": 2009
+                }
+            ]
+        },
+        {
+            "id": 107,
+            "speechId": 35,
+            "channelId": 9,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50903,
+                    "centerId": 2009
+                }
+            ]
+        },
+        {
+            "id": 108,
+            "speechId": 36,
+            "channelId": 9,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50904,
+                    "centerId": 2009
+                }
+            ]
+        },
+        {
+            "id": 109,
+            "speechId": 37,
+            "channelId": 10,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 51001,
+                    "centerId": 2010
+                }
+            ]
+        },
+        {
+            "id": 110,
+            "speechId": 38,
+            "channelId": 10,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 51002,
+                    "centerId": 2010
+                }
+            ]
+        },
+        {
+            "id": 111,
+            "speechId": 39,
+            "channelId": 10,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 51003,
+                    "centerId": 2010
+                }
+            ]
+        },
+        {
+            "id": 112,
+            "speechId": 40,
+            "channelId": 10,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 51004,
+                    "centerId": 2010
+                }
+            ]
+        }
+    ],
+    "Type5Net-E" : "话音功能子网列表结束",
+    "SubNets-E" : "功能子网列表结束"
+}

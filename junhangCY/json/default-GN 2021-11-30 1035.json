@@ -1,0 +1,413 @@
+{
+    "name": "功能规划",
+    "TasksList-S": "任务列表开始",
+    "mTasks": [
+        {
+            "id":255,
+            "timeSyncId": 2010,
+            "timeOffset": 0,
+            "members":[
+                { "id" : 41000 , "type" : 3 },
+                { "id" : 2010 , "type" : 2 }
+            ]
+        },
+        {
+            "id": 1,
+            "timeSyncId": 2001,
+            "timeOffset": 12000,
+            "memberCnt": 13,
+            "members": [
+                { "id" : 1001 , "type" : 1 },
+                { "id" : 1002 , "type" : 1 },
+                { "id" : 1003 , "type" : 1 },
+                { "id" : 1004 , "type" : 1 },
+                { "id" : 1005 , "type" : 1 },
+                { "id" : 1006 , "type" : 1 },
+
+                { "id" : 2001 , "type" : 2 },
+                { "id" : 2002 , "type" : 2 },
+                { "id" : 2003 , "type" : 2 },
+                { "id" : 2004 , "type" : 2 },
+
+                { "id" : 31001 , "type" : 3 },
+                { "id" : 32002 , "type" : 3 },
+                { "id" : 33003 , "type" : 3 }                
+            ]
+        },
+        {
+            "id": 2,
+            "timeSyncId": 2005,
+            "timeOffset": 0,
+            "memberCnt": 13,
+            "members": [
+                { "id" : 1007 , "type" : 1 },
+                { "id" : 1008 , "type" : 1 },
+                { "id" : 1009 , "type" : 1 },
+                { "id" : 1010 , "type" : 1 },
+                { "id" : 1011 , "type" : 1 },
+                { "id" : 1012 , "type" : 1 },
+
+                { "id" : 2005 , "type" : 2 },
+                { "id" : 2006 , "type" : 2 },
+                { "id" : 2007 , "type" : 2 },
+                { "id" : 2008 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 },
+                { "id" : 33006 , "type" : 3 }                
+            ]
+        },
+        {
+            "id": 3,
+            "timeSyncId": 2009,
+            "timeOffset": -12000,
+            "memberCnt": 5,
+            "members": [
+                { "id" : 1013 , "type" : 1 },
+                { "id" : 1014 , "type" : 1 },
+
+                { "id" : 2009 , "type" : 2 },
+                { "id" : 2010 , "type" : 2 },
+
+                { "id" : 31007 , "type" : 3 }               
+            ]
+        }
+    ],
+    "TasksList-E" : "任务列表结束",
+
+    "SubNets-S" : "功能子网列表开始",
+    "subnets": [
+        {
+            "Type1Net-S" : "态势功能子网列表开始"
+        },
+        {
+            "type": 1,
+            "id": 1,
+            "taskId": 1,
+            "capacity": 200,
+            "prop": 1,
+            "memberCnt": 7,
+            "members": [
+                { "id": 1001, "type": 1 , "channelCnt" : 2, "channels" : [1,7] },
+                { "id": 1002, "type": 1 , "channelCnt" : 2, "channels" : [2,8] },
+                { "id": 1003, "type": 1 , "channelCnt" : 2, "channels" : [3,9] },
+                { "id": 1004, "type": 1 , "channelCnt" : 2, "channels" : [4,10] },
+
+                { "id": 2001, "type": 2 },
+                { "id": 2002, "type": 2 },
+
+                { "id": 31001, "type": 3 }
+            ]
+        },
+        {
+            "type": 1,
+            "id": 2,
+            "taskId": 1,
+            "capacity": 200,
+            "prop": 2,
+            "memberCnt": 4,
+            "members": [
+                {"id" : 1005, "type" : 1, "channelCnt" : 2, "channels" : [5,11] },
+                {"id" : 1006, "type" : 1, "channelCnt" : 2, "channels" : [6,12] },
+
+                {"id" : 2003, "type" : 2 },
+
+                {"id" : 31001, "type" : 3 }
+            ]
+        },
+        {
+            "type": 1,
+            "id": 3,
+            "taskId": 2,
+            "capacity": 200,
+            "prop": 3,
+            "memberCnt": 7,
+            "members": [
+                { "id" : 1007 , "type" : 1 , "channelCnt" : 2, "channels" : [1,7] },
+                { "id" : 1008 , "type" : 1 , "channelCnt" : 2, "channels" : [2,8] },
+                { "id" : 1009 , "type" : 1 , "channelCnt" : 2, "channels" : [3,9] },
+                { "id" : 1010 , "type" : 1 , "channelCnt" : 2, "channels" : [4,10] },
+
+                { "id" : 2005 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 1,
+            "id": 4,
+            "taskId": 2,
+            "capacity": 200,
+            "prop": 4,
+            "memberCnt": 4,
+            "members": [
+                { "id" : 1011 , "type" : 1 , "channelCnt" : 2, "channels" : [5,11] },
+                { "id" : 1012 , "type" : 1 , "channelCnt" : 2, "channels" : [6,12] },
+
+                { "id" : 2006 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 1,
+            "id": 254,
+            "taskId": 3,
+            "capacity": 200,
+            "prop": 1,
+            "memberCnt": 3,
+            "members": [
+                { "id" : 1013 , "type" : 1 , "channelCnt" : 1, "channels" : [13] },
+
+                { "id" : 2009 , "type" : 2 },
+
+                { "id" : 31007 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 1,
+            "id": 255,
+            "taskId": 3,
+            "capacity": 200,
+            "prop": 2,
+            "memberCnt": 3,
+            "members": [
+                { "id" : 1014 , "type" : 1 , "channelCnt" : 1, "channels" : [14] },
+
+                { "id" : 2010 , "type" : 2 },
+                
+                { "id" : 31007 , "type" : 3 }
+            ]  
+        },
+        {
+            "Type1Net-E" : "态势功能子网列表结束",
+            "Type2Net-S" : "指挥控制子网列表开始"
+        },
+        {
+            "type": 2,
+            "id": 7,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 7,
+            "members": [
+                { "id": 1001, "type": 1 , "channelCnt" : 2, "channels" : [1,7] },
+                { "id": 1002, "type": 1 , "channelCnt" : 2, "channels" : [2,8] },
+                { "id": 1003, "type": 1 , "channelCnt" : 2, "channels" : [3,9] },
+                { "id": 1004, "type": 1 , "channelCnt" : 2, "channels" : [4,10] },
+
+                { "id": 2001, "type": 2 },
+                { "id": 2002, "type": 2 },
+
+                { "id": 31001, "type": 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 8,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 7,
+            "members": [
+                { "id" : 1007 , "type" : 1 , "channelCnt" : 2, "channels" : [1,7] },
+                { "id" : 1008 , "type" : 1 , "channelCnt" : 2, "channels" : [2,8] },
+                { "id" : 1009 , "type" : 1 , "channelCnt" : 2, "channels" : [3,9] },
+                { "id" : 1010 , "type" : 1 , "channelCnt" : 2, "channels" : [4,10] },
+
+                { "id" : 2005 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 2,
+            "id": 9,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 4,
+            "members": [
+                { "id" : 1011 , "type" : 1 , "channelCnt" : 2, "channels" : [5,11] },
+                { "id" : 1012 , "type" : 1 , "channelCnt" : 2, "channels" : [6,12] },
+
+                { "id" : 2006 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 }
+            ]
+        },
+        {
+            "Type2Net-E" : "指挥控制子网列表结束",
+            "Type3Net-S" : "文电功能子网列表开始"
+        },
+        {
+            "type": 3,
+            "id": 10,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 7,
+            "members": [
+                { "id": 1001, "type": 1 , "channelCnt" : 2, "channels" : [1,7] },
+                { "id": 1002, "type": 1 , "channelCnt" : 2, "channels" : [2,8] },
+                { "id": 1003, "type": 1 , "channelCnt" : 2, "channels" : [3,9] },
+                { "id": 1004, "type": 1 , "channelCnt" : 2, "channels" : [4,10] },
+
+                { "id": 2001, "type": 2 },
+                { "id": 2002, "type": 2 },
+
+                { "id": 31001, "type": 3 }
+            ]
+        },
+        {
+            "type": 3,
+            "id": 11,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 7,
+            "members": [
+                { "id" : 1007 , "type" : 1 , "channelCnt" : 2, "channels" : [1,7] },
+                { "id" : 1008 , "type" : 1 , "channelCnt" : 2, "channels" : [2,8] },
+                { "id" : 1009 , "type" : 1 , "channelCnt" : 2, "channels" : [3,9] },
+                { "id" : 1010 , "type" : 1 , "channelCnt" : 2, "channels" : [4,10] },
+
+                { "id" : 2005 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 3,
+            "id": 12,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 4,
+            "members": [
+                { "id" : 1011 , "type" : 1 , "channelCnt" : 2, "channels" : [5,11] },
+                { "id" : 1012 , "type" : 1 , "channelCnt" : 2, "channels" : [6,12] },
+
+                { "id" : 2006 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 }
+            ]
+        },
+        {
+            "Type3Net-E" : "文电功能子网列表结束",
+            "Type4Net-S" : "指挥协同子网列表开始"
+        },
+        {
+            "type": 4,
+            "id": 13,
+            "taskId": 1,
+            "capacity": 0,
+            "memberCnt": 7,
+            "members": [
+                { "id": 1001, "type": 1 , "channelCnt" : 2, "channels" : [1,7] },
+                { "id": 1002, "type": 1 , "channelCnt" : 2, "channels" : [2,8] },
+                { "id": 1003, "type": 1 , "channelCnt" : 2, "channels" : [3,9] },
+                { "id": 1004, "type": 1 , "channelCnt" : 2, "channels" : [4,10] },
+
+                { "id": 2001, "type": 2 },
+                { "id": 2002, "type": 2 },
+
+                { "id": 31001, "type": 3 }
+            ]
+        },
+        {
+            "type": 4,
+            "id": 14,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 7,
+            "members": [
+                { "id" : 1007 , "type" : 1 , "channelCnt" : 2, "channels" : [1,7] },
+                { "id" : 1008 , "type" : 1 , "channelCnt" : 2, "channels" : [2,8] },
+                { "id" : 1009 , "type" : 1 , "channelCnt" : 2, "channels" : [3,9] },
+                { "id" : 1010 , "type" : 1 , "channelCnt" : 2, "channels" : [4,10] },
+
+                { "id" : 2005 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 },
+                { "id" : 32005 , "type" : 3 }
+            ]
+        },
+        {
+            "type": 4,
+            "id": 15,
+            "taskId": 2,
+            "capacity": 0,
+            "memberCnt": 4,
+            "members": [
+                { "id" : 1011 , "type" : 1 , "channelCnt" : 2, "channels" : [5,11] },
+                { "id" : 1012 , "type" : 1 , "channelCnt" : 2, "channels" : [6,12] },
+
+                { "id" : 2006 , "type" : 2 },
+
+                { "id" : 31004 , "type" : 3 }
+            ]
+        },
+        {
+            "Type4Net-E" : "指挥协同子网列表结束"
+        }
+    ],
+    "Type5Net-S" : "话音功能子网列表开始",
+    "voiceNets":
+    [
+        {
+            "id": 16,
+            "speechId": 1,
+            "channelId": 1,
+            "seatCnt": 4,
+            "seats": 
+            [
+                {
+                    "id": 50101,
+                    "centerId": 2001
+                },
+                {
+                    "id": 50102,
+                    "centerId": 2001
+                },
+                {
+                    "id": 50201,
+                    "centerId": 2002
+                },
+                {
+                    "id": 50202,
+                    "centerId": 2002
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "speechId": 2,
+            "channelId": 1,
+            "seatCnt": 2,
+            "seats": 
+            [
+                {
+                    "id": 50501,
+                    "centerId": 2005
+                },
+                {
+                    "id": 50502,
+                    "centerId": 2005
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "speechId": 3,
+            "channelId": 2,
+            "seatCnt": 1,
+            "seats": 
+            [
+                {
+                    "id": 50601,
+                    "centerId": 2006
+                }
+            ]
+        }
+    ],
+    "Type5Net-E" : "话音功能子网列表结束",
+    "SubNets-E" : "功能子网列表结束"
+}
